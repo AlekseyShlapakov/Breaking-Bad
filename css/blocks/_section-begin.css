@@ -1,0 +1,21 @@
+.section-begin {
+  height: 800px;
+  padding-top: 155px;
+}
+.row-section-begin {
+  display: flex;
+  justify-content: space-between;
+}
+.section-begin__subtitle {
+  font-family: 'Cooper Md BT';
+  font-size: 20px;
+  line-height: 24px;
+}
+.section-begin__title {
+  font-family: 'Cooper Md BT';
+  font-size: 50px;
+  line-height: 60px;
+}
+.section-begin__text {
+  width: 367px;
+}
