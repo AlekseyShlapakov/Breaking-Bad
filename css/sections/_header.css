@@ -1,0 +1,75 @@
+.header {
+  background-color: #000;
+  height: 1600px;
+  background-image: url(../img/walter.png);
+  background-repeat: no-repeat;
+  background-position-x: 57%;
+}
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+.top-panel {
+  width: 100%;
+  height: 178px;
+  color: #FFF;
+}
+.row-top-panel {
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.top-panel__notification {
+  display: flex;
+  align-items: center;
+}
+.top-panel__logo {
+  margin-right: 50px;
+}
+.top-panel__menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.top-panel__menu ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 38px;
+}
+.top-panel__menu ul li:last-child {
+  margin-right: 0;
+}
+.top-panel__menu ul li a {
+  color: #FFF;
+  text-decoration: none;
+}
+.top-panel__menu ul li a:hover,
+.top-panel__menu ul li a:focus,
+.top-panel__menu ul li a:active {
+  color: #DCEE19;
+  transition: all 0.3s ease-in;
+}
+.top-panel__language--margin-small ul li {
+  margin-right: 10px;
+}
+.middle-panel {
+  width: 100%;
+  height: 278px;
+}
+.row-middle-panel {
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.middle-panel__slogan {
+  font-size: 20px;
+  line-height: 24px;
+}

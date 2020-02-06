@@ -1,0 +1,206 @@
+.header {
+    background-color: #000;
+    height: 1600px;
+    background-image: url(../img/walter.png);
+    background-repeat: no-repeat;
+    background-position-x: 52%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+}
+
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+
+.top-panel {
+    width: 100%;
+    height: 115px;
+    color: #FFF;
+}
+
+.row-top-panel {
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.top-panel__notification {
+    display: flex;
+    align-items: center;
+}
+
+.top-panel__logo {
+    margin-right: 50px;
+}
+
+.top-panel__menu {
+    font-size: 15px;
+    line-height: 0;
+
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+
+        li {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            margin-right: 37px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                color: #FFF;
+                text-decoration: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: @akcent;
+                    transition: all 0.3s ease-in;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+.top-panel__language--margin-small {
+
+    ul {
+
+        li {
+            margin-right: 4px;
+        }
+    }
+
+}
+
+// Middle head
+
+.middle-panel {
+    width: 100%;
+    height: 257px;
+    margin-top: auto;
+    margin-bottom: 32px;
+}
+
+.row-middle-panel {
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.middle-panel__slogan {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.middle-panel__title {
+    margin-bottom: 45px;
+}
+
+.middle-panel__play {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .middle-panel__play-text {
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-left: 30px;
+
+        a {
+            text-decoration: none;
+            color: #FFF;
+
+            &:hover {
+                color: @akcent;
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+}
+
+.middle-panel__right-text {
+    margin: 0;
+    max-width: 275px;
+    font-size: 15px;
+    line-height: 27px;
+    color: #CECECE;
+    margin-left: auto;
+    margin-bottom: 10px;
+
+    .p {
+        margin: 0;
+    }
+}
+
+// End Middle head
+
+// Footer head
+.footer-panel {
+    margin-bottom: 70px;
+}
+.row-footer-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-panel__left {
+    display: flex;
+}
+
+.footer-panel__factoids {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.footer-panel__factoids-price {
+    margin-right: 15px;
+}
+
+.footer-panel__factoids-text span {
+    display: block;
+    font-size: 15px;
+    line-height: 18PX;
+    color: rgba(206, 206, 206, 0.85);
+    margin-bottom: 7px;
+  
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer-panel__icons {
+margin-left: 20px;
+}
+
+// End footer head
