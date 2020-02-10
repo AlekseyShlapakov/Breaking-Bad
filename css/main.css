@@ -20,6 +20,11 @@ font-family: 'Playfair Display', serif;*/
 .section-begin {
   height: 800px;
   padding-top: 155px;
+  background-color: #000;
+  background-image: url(../img/bg/bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .row-section-begin {
   display: flex;
@@ -29,21 +34,84 @@ font-family: 'Playfair Display', serif;*/
   font-family: 'Cooper Md BT';
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 12px;
 }
 .section-begin__title {
   font-family: 'Cooper Md BT';
   font-weight: normal;
   font-size: 50px;
   line-height: 60px;
-  color: #dcee19;
+  color: #DCEE19;
   margin: 0;
+  margin-bottom: 30px;
 }
 .section-begin__text {
   width: 367px;
   font-family: 'Proxima Nova';
   font-size: 15px;
-  line-height: 165%;
+  line-height: 170%;
   color: rgba(255, 255, 255, 0.8);
+}
+.section-begin__text p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.section-second {
+  height: 800px;
+  padding-top: 155px;
+  background-image: url(../img/bg/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.row-section-second {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.section-second__right {
+  margin-left: 30px;
+  position: relative;
+}
+.section-second__right:before {
+  content: '';
+  background-image: url(../img/bg/bg-second.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1135px;
+  height: 740px;
+  right: -152px;
+  top: -5px;
+}
+.section-second__img {
+  position: relative;
+}
+.section-second__subtitle {
+  font-family: 'Cooper Md BT';
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.section-second__title {
+  font-family: 'Cooper Md BT';
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  color: #DCEE19;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.section-second__text {
+  width: 367px;
+  font-family: 'Proxima Nova';
+  font-size: 15px;
+  line-height: 170%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.section-second__text p {
+  margin: 0;
+  margin-bottom: 10px;
 }
 .header {
   background-color: #000;
@@ -63,6 +131,9 @@ font-family: 'Playfair Display', serif;*/
   margin-left: auto;
   margin-right: auto;
   height: 100%;
+}
+.container-big {
+  width: 1440px;
 }
 .top-panel {
   width: 100%;

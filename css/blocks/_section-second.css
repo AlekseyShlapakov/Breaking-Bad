@@ -1,23 +1,41 @@
-.section-begin {
+.section-second {
   height: 800px;
   padding-top: 155px;
-  background-color: #000;
-  background-image: url(../img/bg/bg2.jpg);
+  background-image: url(../img/bg/bg1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
 }
-.row-section-begin {
+.row-section-second {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
-.section-begin__subtitle {
+.section-second__right {
+  margin-left: 30px;
+  position: relative;
+}
+.section-second__right:before {
+  content: '';
+  background-image: url(../img/bg/bg-second.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1135px;
+  height: 740px;
+  right: -152px;
+  top: -5px;
+}
+.section-second__img {
+  position: relative;
+}
+.section-second__subtitle {
   font-family: 'Cooper Md BT';
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 12px;
 }
-.section-begin__title {
+.section-second__title {
   font-family: 'Cooper Md BT';
   font-weight: normal;
   font-size: 50px;
@@ -26,14 +44,14 @@
   margin: 0;
   margin-bottom: 30px;
 }
-.section-begin__text {
+.section-second__text {
   width: 367px;
   font-family: 'Proxima Nova';
   font-size: 15px;
   line-height: 170%;
   color: rgba(255, 255, 255, 0.8);
 }
-.section-begin__text p {
+.section-second__text p {
   margin: 0;
   margin-bottom: 10px;
 }
