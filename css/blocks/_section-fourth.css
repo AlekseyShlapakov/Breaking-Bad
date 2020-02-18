@@ -1,0 +1,88 @@
+.section-fourth {
+  height: 800px;
+  padding-top: 70px;
+}
+.row-section-fourth {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.section-fourth__right {
+  margin-left: 30px;
+}
+.section-fourth__subtitle {
+  font-family: 'Cooper Md BT';
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.section-fourth__title {
+  font-family: 'Cooper Md BT';
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  color: #DCEE19;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.section-fourth__text {
+  width: 540px;
+  font-family: 'Proxima Nova';
+  font-size: 15px;
+  line-height: 170%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 35px;
+}
+.section-fourth__text p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.section-fourth__preview {
+  display: flex;
+  justify-content: space-between;
+}
+.section-fourth__preview-img {
+  cursor: pointer;
+  position: relative;
+}
+.section-fourth__preview-img a {
+  display: block;
+  text-decoration: none;
+}
+.section-fourth__preview-img a:hover {
+  color: #DCEE19;
+  transition: all 0.3s ease-in;
+}
+.section-fourth__preview-img:hover,
+.section-fourth__preview-img:focus,
+.section-fourth__preview-img:active {
+  opacity: 0.5;
+  transition: all 0.3s ease-in;
+}
+.section-fourth__preview-img:before {
+  position: absolute;
+  content: '';
+  background-color: #242420;
+  width: 103px;
+  height: 141px;
+  opacity: 0;
+}
+.section-fourth__preview-img img {
+  width: 103px;
+  height: 141px;
+  margin-bottom: 15px;
+}
+.section-fourth__preview-title {
+  cursor: pointer;
+}
+.section-fourth__preview-title:hover,
+.section-fourth__preview-title:focus,
+.section-fourth__preview-title:active {
+  color: #DCEE19;
+  transition: all 0.3s ease-in;
+}
+.section-fourth__arrow img {
+  margin-right: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
