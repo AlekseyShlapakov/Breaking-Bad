@@ -253,6 +253,50 @@ font-family: 'Playfair Display', serif;*/
   margin-top: 20px;
   cursor: pointer;
 }
+.section-fifth {
+  height: 800px;
+  padding-top: 155px;
+  position: relative;
+}
+.row-section-fifth {
+  display: flex;
+  justify-content: space-between;
+}
+.section-fifth__left {
+  width: 460px;
+}
+.section-fifth__title {
+  font-family: 'Cooper Md BT';
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  color: #DCEE19;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.section-fifth__soundtrack {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+.section-fifth__play {
+  margin-right: 30px;
+}
+.section-fifth__song {
+  width: 100%;
+}
+.section-fifth__song-subtitl {
+  margin-left: 115px;
+  margin-top: 9px;
+}
+.hr {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 13px;
+}
 .header {
   background-color: #000;
   height: 1600px;

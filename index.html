@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Breaking Bad redesign</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="assets/reset.css" />
+	<link rel="stylesheet" href="assets/audioplayer.css" />
     <link href="//db.onlinewebfonts.com/c/5a2d744f08ebe9cbea82e94d86efece9?family=Cooper+Md+BT" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" href="fonts/ProximaNova/stylesheet.css" />
@@ -311,8 +313,8 @@
                         </div>
                     </div>
                     <div class="section-fourth__arrow">
-                        <img src="/img/arrow-left.svg" alt="left">
-                        <img src="/img/arrow-right.svg" alt="right">
+                        <a href="#"><img src="/img/arrow-left.svg" alt="left"></a>
+                        <a href="#"><img src="/img/arrow-right.svg" alt="right"></a>
                     </div>
                 </div>
             </div>
@@ -320,7 +322,96 @@
     </div>
     <!--// Section-fourth -->
 
-    
+        <!-- Section-fifth -->
+        <div class="section-fifth">
+            <div class="container">
+                <div class="row-section-fifth">
+                    <div class="section-fifth__right">
+                        <img  src="/img/soundtrack.png" class="section-fifth__img" alt="Breaking Bad Soundtrack">
+                    </div>
+                    <div class="section-fifth__left">
+                        <h2 class="section-fifth__title">
+                            Soundtrack
+                        </h2>
+                        <div class="section-fifth__soundtrack">
+                            <div id="wrapper">
+                            
+                                <audio preload="auto" controls>
+                                    <source src="assets/tracks/el paso.mp3" />
+                                    <source src="assets/audio.ogg" />
+                                    <source src="assets/audio.wav" />
+                                </audio>
+                                <div class="section-fifth__song-subtitl">
+                                    Marty Robbins — El Paso
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-fifth__soundtrack">
+                            <div id="wrapper">
+                            
+                                <audio preload="auto" controls>
+                                    <source src="assets/tracks/tattooed lady.mp3" />
+                                    <source src="assets/audio.ogg" />
+                                    <source src="assets/audio.wav" />
+                                </audio>
+                                <div class="section-fifth__song-subtitl">
+                                    Groucho Marx — Lydia the Tattooed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-fifth__soundtrack">
+                            <div id="wrapper">
+                            
+                                <audio preload="auto" controls>
+                                    <source src="assets/tracks/limelitersl.mp3" />
+                                    <source src="assets/audio.ogg" />
+                                    <source src="assets/audio.wav" />
+                                </audio>
+                                <div class="section-fifth__song-subtitl">
+                                    The Limeliters — Times are Getting Hard
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-fifth__soundtrack">
+                            <div id="wrapper">
+                            
+                                <audio preload="auto" controls>
+                                    <source src="assets/tracks/science.mp3" />
+                                    <source src="assets/audio.ogg" />
+                                    <source src="assets/audio.wav" />
+                                </audio>
+                                <div class="section-fifth__song-subtitl">
+                                    Dolby — She Blinded Me With Science
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-fifth__soundtrack">
+                            <div id="wrapper">
+                            
+                                <audio preload="auto" controls>
+                                    <source src="assets/tracks/stomp.mp3" />
+                                    <source src="assets/audio.ogg" />
+                                    <source src="assets/audio.wav" />
+                                </audio>
+                                <div class="section-fifth__song-subtitl">
+                                    Slim Rhodes — Gonna Romp and Stomp
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// Section-fifth -->
+
+<script src="assets/jquery.js"></script>
+<script src="assets/audioplayer.js"></script>
+<script>
+    $( function()
+    {
+        $( 'audio' ).audioPlayer();
+    });
+</script>
 
 
     
