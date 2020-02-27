@@ -12,10 +12,6 @@ body {
 
 body {
     background-color: #000;
-    background-image: url(../img/bg/fon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 6500px;
     margin: 0;
     font-size: 15px;
     color: #fff;
@@ -33,7 +29,7 @@ font-family: 'Playfair Display', serif;*/
 // @import "base/_utils.less";
 
 // General
-// @import "base/_base.less";
+@import "base/_base.less";
 
 // Blocks
 @import "blocks/_section-begin.less";
@@ -41,7 +37,8 @@ font-family: 'Playfair Display', serif;*/
 @import "blocks/_section-third.less";
 @import "blocks/_section-fourth.less";
 @import "blocks/_section-fifth.less";
-// @import "blocks/_private-tours.less";
+@import "blocks/_section-sixth.less";
+
 // @import "blocks/_gallery.less";
 // @import "blocks/_useful.less";
 // @import "blocks/_team.less";
@@ -51,4 +48,4 @@ font-family: 'Playfair Display', serif;*/
 // Sections
 @import "sections/_header.less";
 // @import "sections/_section.less";
-// @import "sections/_footer.less";
+@import "sections/_footer.less";
