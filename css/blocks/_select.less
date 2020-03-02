@@ -1,0 +1,117 @@
+input
+{
+  display: none;
+}
+
+.select
+{
+  display: inline-block;
+  background-image: url(../img/season.svg);
+  background-repeat: no-repeat;
+  width: 152px;
+  height: 55px;
+  line-height: 30px;
+  position: relative;
+}
+
+.select input[name="list"]:not(:checked) ~ #text
+{
+  color: black;
+  background: transparent;
+}
+
+.select input[name="list"]:checked ~ #text
+{
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+#select:disabled ~ .items #text
+{
+  background: #eee;
+}
+
+.select:before
+{
+  content: "";
+  display: inline-block;
+  background: transparent;
+  position: absolute;
+  right: 56px;
+  top: -51px;
+  width: 38px;
+  height: 145px;
+  z-index: 5;
+  text-align: center;
+  line-height: 26px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+
+
+
+.items
+{
+  display: block;
+  min-height: 50px;
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  cursor: pointer;
+  margin-top: 16px;
+  z-index: 4;
+}
+
+#select:not(:checked) ~ .items
+{
+  height: 30px;
+}
+
+.items label
+{
+  border: 1px solid #ddd;
+  display: none;
+  padding-left: 28px;
+  padding-top: 7px;
+  font-size: 18px;
+  background: transparent;
+  color: #fff;
+  height: 45px;
+}
+
+.items label:hover
+{
+    background: rgba(22, 21, 21, 0.7);
+  cursor: pointer;
+}
+
+#select:checked ~ .items
+{
+  padding-top: 30px;
+}
+
+#select:checked ~ .items label
+{
+  display: block;
+}
+
+.items input:checked + label
+{
+  display: block!important;
+  border: none;
+  background: rgba(22, 21, 21, 0.7);
+}
+
+#select:checked ~ .bg
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: rgba(0,0,0,0.4);
+}
+

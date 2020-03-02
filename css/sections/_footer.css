@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
   height: 187px;
   background: rgba(12, 11, 11, 0.8);
   margin-top: 85px;
@@ -18,6 +19,9 @@
   font-size: 20px;
   line-height: 24px;
   margin-right: 50px;
+}
+.footer__left-menu ul li {
+  margin-right: 46px;
 }
 .footer__left-menu:last-child {
   margin-right: 0;

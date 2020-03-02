@@ -1,7 +1,11 @@
+/*------Watch all-----------*/
 .section-sixth {
-  height: 800px;
-  padding-top: 55px;
   position: relative;
+  height: 800px;
+  padding-top: 107px;
+  background-image: url(../img/bg/bg-6.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .row-section-sixth {
   position: relative;
@@ -17,6 +21,9 @@
   display: flex;
   justify-content: flex-end;
 }
+.section-sixth__right-form {
+  color: #000;
+}
 .section-sixth__left-img {
   position: relative;
 }
@@ -27,8 +34,8 @@
   position: absolute;
   width: 128px;
   height: 128px;
-  right: 39%;
-  top: 38%;
+  right: 43%;
+  top: 37%;
 }
 .section-sixth__left {
   position: relative;
@@ -49,14 +56,38 @@
 .section-sixth__right-form {
   margin-left: 90px;
 }
-.section-sixth__right-thumb {
+.section-sixth__right-wrap {
+  position: relative;
+  margin-right: 40px;
   margin-bottom: 41px;
 }
-.section-sixth__right-thumb:last-child {
+.section-sixth__right-wrap:last-child {
   margin-bottom: 0;
 }
-.section-sixth__right-series {
-  margin-right: 40px;
+.section-sixth__right-subtitle {
+  position: absolute;
+  background: rgba(22, 21, 21, 0.7);
+  width: 100%;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
+}
+.section-sixth__right-text {
+  padding-left: 15px;
+  padding-top: 12px;
+}
+.section-sixth__left {
+  position: relative;
+}
+.section-sixth__left-subtitle {
+  position: absolute;
+  background: rgba(22, 21, 21, 0.7);
+  width: 100%;
+  height: 74px;
+  right: 0;
+  bottom: 0;
+  font-size: 20px;
 }
 .section-sixth__right-scroll {
   position: absolute;
@@ -66,3 +97,4 @@
   height: 100%;
   border-right: 1px solid #fff;
 }
+/*------ End Watch all-----------*/
