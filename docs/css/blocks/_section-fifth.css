@@ -1,0 +1,49 @@
+/*------Soundtrack-----------*/
+.section-fifth {
+  height: 800px;
+  padding-top: 177px;
+  position: relative;
+  background-image: url(../img/bg/bg-5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.row-section-fifth {
+  display: flex;
+  justify-content: space-between;
+}
+.section-fifth__left {
+  width: 460px;
+}
+.section-fifth__title {
+  font-family: 'Cooper Md BT';
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  color: #DCEE19;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.section-fifth__soundtrack {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 46px;
+}
+.section-fifth__play {
+  margin-right: 30px;
+}
+.section-fifth__song {
+  width: 100%;
+}
+.section-fifth__song-subtitl {
+  margin-left: 115px;
+  margin-top: 9px;
+}
+.hr {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 13px;
+}
+/*------End Soundtrack-----------*/
