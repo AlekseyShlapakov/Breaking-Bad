@@ -615,7 +615,7 @@ input {
 .top-panel {
   width: 100%;
   height: 115px;
-  color: #FFF;
+  color: #fff;
   position: fixed;
 }
 .row-top-panel {
@@ -659,13 +659,13 @@ input {
   margin-right: 0;
 }
 .nav__link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .nav__link:hover,
 .nav__link:focus,
 .nav__link:active {
-  color: #DCEE19;
+  color: #dcee19;
   transition: all 0.3s ease-in;
 }
 .nav__item--small {
@@ -757,13 +757,13 @@ input {
   margin-bottom: 30px;
 }
 .mobile-nav__link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .mobile-nav__link:hover,
 .mobile-nav__link:focus,
 .mobile-nav__link:active {
-  color: #DCEE19;
+  color: #dcee19;
   transition: all 0.3s ease-in;
 }
 .mobile-menu__icons {
@@ -858,10 +858,10 @@ input {
 }
 .middle-panel__play .middle-panel__play-text a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 .middle-panel__play .middle-panel__play-text a:hover {
-  color: #DCEE19;
+  color: #dcee19;
   transition: all 0.3s ease-in;
 }
 .middle-panel__right {
@@ -877,7 +877,7 @@ input {
   max-width: 267px;
   font-size: 14px;
   line-height: 27px;
-  color: #CECECE;
+  color: #cecece;
   margin-left: auto;
   margin-bottom: 10px;
 }
@@ -889,6 +889,20 @@ input {
     max-width: 287px;
     font-size: 15px;
   }
+}
+.row-menu {
+  display: flex;
+  margin-top: 20px;
+}
+.row-menu__left {
+  margin-right: 35px;
+  cursor: pointer;
+}
+.row-menu__right {
+  cursor: pointer;
+}
+.row-menu__right--opacity {
+  opacity: 0.5;
 }
 /*------------- End Middle head ---------------*/
 /*---------- Footer head -------------*/
@@ -942,7 +956,7 @@ input {
 .footer-panel__factoids-text span {
   display: block;
   font-size: 14px;
-  line-height: 18PX;
+  line-height: 18px;
   color: rgba(206, 206, 206, 0.85);
   margin-bottom: 7px;
 }

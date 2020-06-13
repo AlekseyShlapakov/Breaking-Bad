@@ -1,99 +1,77 @@
-$(document).ready(function() {
+$ (document).ready (function () {
   /*------ Плавная прокрутка ---------*/
-  $("a[href*=#]").on("click", function(e) {
-    var anchor = $(this);
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $(anchor.attr("href")).offset().top
-        },
-        777
-      );
-    e.preventDefault();
+  $ ('a[href*=#]').on ('click', function (e) {
+    var anchor = $ (this);
+    $ ('html, body').stop ().animate (
+      {
+        scrollTop: $ (anchor.attr ('href')).offset ().top,
+      },
+      777
+    );
+    e.preventDefault ();
     return false;
   });
-
-  /*-------- Кнопка навигации ----*/
-  const menuToggle = document.querySelector("#menu-togle");
-  const mobileNavContainer = document.querySelector("#mobile-nav");
-  // const castContainer = document.querySelector('#jesse');
-
-  menuToggle.onclick = function() {
-    menuToggle.classList.toggle("menu-icon-active");
-    mobileNavContainer.classList.toggle("mobile-nav--active");
-    // castContainer.classList.toggle('display-none');
-  };
 });
 
-$("#jesse").click(function() {
-  console.log("Click!");
-  $(".section-fourth__right-jesse").toggleClass("display-block");
-  $(".section-fourth__right").toggleClass("display-none");
+/*------ Slider in header! ---------*/
+
+const bgImg = document.querySelector ('.wrapper');
+
+const firstText = document.querySelector ('.middle-panel__first-text');
+
+const secondText = document.querySelector ('.middle-panel__second-text');
+
+const thirdText = document.querySelector ('.middle-panel__third-text');
+
+document.querySelector ('.row-menu').addEventListener ('click', function (e) {
+  let target = e.target;
+
+  if (
+    target.hasAttribute ('data-direction') &&
+    target.getAttribute ('data-direction') == 'right'
+  ) {
+    firstText.style.display = 'none';
+    secondText.style.display = 'block';
+    bgImg.style.backgroundImage = 'url(../img/header-img/jesse1.png)';
+    // transition: all 0.3s ease-in;
+    // bgImg.style.transition = 'all 1s ease-in';
+    // secondText.style.transition = 'all 1s ease-in';
+  } 
 });
 
-/*---------Упражнение---------*/
+document.querySelector ('.row-menu__second').addEventListener ('click', function (e) {
+  let target = e.target;
 
-var markResult1 = 1111199;
-var markResult2 = 120;
-var markResult3 = 103;
+ if (
+    target.hasAttribute ('data-direction') &&
+    target.getAttribute ('data-direction') == 'right-second'
+  ) {
+    firstText.style.display = 'none';
+    secondText.style.display = 'none';
+    thirdText.style.display = 'block';
+    bgImg.style.backgroundImage = 'url(../img/header-img/walter.png)';
+  } else if (
+    target.hasAttribute ('data-direction') &&
+    target.getAttribute ('data-direction') == 'left-second'
+  ) {
+    firstText.style.display = 'block';
+    secondText.style.display = 'none';
+    thirdText.style.display = 'none';
+    bgImg.style.backgroundImage = 'url(../img/header-img/walter.png)';
+  }
+});
 
-var markAllResult = (markResult1 + markResult2 + markResult3) / 3;
-console.log(markAllResult);
+document.querySelector ('.row-menu__third').addEventListener ('click', function (e) {
+  let target = e.target;
+  console.log('target', target)
 
-var paulResult1 = 2220;
-var paulResult2 = 82;
-var paulResult3 = 35;
-
-var paulAllResult = (paulResult1 + paulResult2 + paulResult3) / 3;
-console.log(paulAllResult);
-
-if (markAllResult > paulAllResult) {
-  console.log("Победила команда Марка");
-} else if (markAllResult === paulAllResult) {
-  console.log("Победила дружба!");
-} else {
-  console.log("Победила команда Пола!");
-}
-
-var maryResult1 = 87;
-var maryResult2 = 105;
-var maryResult3 = 140;
-
-var maryAllResult = (maryResult1 + maryResult2 + maryResult3) / 3;
-console.log(maryAllResult);
-
-if (markAllResult > paulAllResult && markAllResult > maryAllResult) {
-  console.log("Победила команда Марка");
-} else if (paulAllResult > markAllResult && paulAllResult > maryAllResult) {
-  console.log("Победила команда Пола");
-} else if (maryAllResult > markAllResult && maryAllResult > paulAllResult) {
-  console.log("Победила команда Мэри");
-} else {
-  console.log("Ничья!");
-}
-
-/*Функции*/
-
-function sayHello() {
-  console.log("Hello!");
-}
-
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
-sayHello();
+ if (
+    target.hasAttribute ('data-direction') &&
+    target.getAttribute ('data-direction') == 'left-third'
+  ) {
+    firstText.style.display = 'none';
+    secondText.style.display = 'block';
+    thirdText.style.display = 'none';
+    bgImg.style.backgroundImage = 'url(../img/header-img/jesse1.png)';
+  }
+});
