@@ -1,16 +1,26 @@
 /*------Jesse-----------*/
 .section-second {
   height: 800px;
-  padding-top: 155px;
+  padding-top: 50px;
   position: relative;
   background-image: url(../img/bg/bg-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-width: 1200px) {
+  .section-second {
+    padding-top: 100px;
+  }
+}
 .row-section-second {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: column;
+}
+@media (min-width: 767px) {
+  .row-section-second {
+    flex-direction: row-reverse;
+  }
 }
 .section-second__right {
   margin-left: 30px;
