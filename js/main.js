@@ -13,6 +13,17 @@ $ (document).ready (function () {
   });
 });
 
+ /*-------- Кнопка навигации ----*/
+ const menuToggle = document.querySelector("#menu-togle");
+ const mobileNavContainer = document.querySelector("#mobile-nav");
+ // const castContainer = document.querySelector('#jesse');
+
+ menuToggle.onclick = function() {
+   menuToggle.classList.toggle("menu-icon-active");
+   mobileNavContainer.classList.toggle("mobile-nav--active");
+   // castContainer.classList.toggle('display-none');
+ };
+
 /*------ Slider in header! ---------*/
 
 const bgImg = document.querySelector ('.wrapper');
@@ -32,10 +43,12 @@ document.querySelector ('.row-menu').addEventListener ('click', function (e) {
   ) {
     firstText.style.display = 'none';
     secondText.style.display = 'block';
-    bgImg.style.backgroundImage = 'url(../img/header-img/jesse1.png)';
+
+    secondText.classList.add('fade');
+    bgImg.style.backgroundImage = 'url(../img/header-img/jesse.png)';
     // transition: all 0.3s ease-in;
-    // bgImg.style.transition = 'all 1s ease-in';
-    // secondText.style.transition = 'all 1s ease-in';
+    bgImg.style.transition = 'all 0.3s ease-in';
+    secondText.style.transition = 'all 0.3s ease-in';
   } 
 });
 
@@ -49,7 +62,7 @@ document.querySelector ('.row-menu__second').addEventListener ('click', function
     firstText.style.display = 'none';
     secondText.style.display = 'none';
     thirdText.style.display = 'block';
-    bgImg.style.backgroundImage = 'url(../img/header-img/walter.png)';
+    bgImg.style.backgroundImage = 'url(../img/header-img/mike.png)';
   } else if (
     target.hasAttribute ('data-direction') &&
     target.getAttribute ('data-direction') == 'left-second'
@@ -63,7 +76,6 @@ document.querySelector ('.row-menu__second').addEventListener ('click', function
 
 document.querySelector ('.row-menu__third').addEventListener ('click', function (e) {
   let target = e.target;
-  console.log('target', target)
 
  if (
     target.hasAttribute ('data-direction') &&
@@ -72,6 +84,14 @@ document.querySelector ('.row-menu__third').addEventListener ('click', function 
     firstText.style.display = 'none';
     secondText.style.display = 'block';
     thirdText.style.display = 'none';
-    bgImg.style.backgroundImage = 'url(../img/header-img/jesse1.png)';
+    bgImg.style.backgroundImage = 'url(../img/header-img/jesse.png)';
   }
+});
+
+
+// Swaiper
+var mySwiper = new Swiper('.swiper-container', {
+  // speed: 400,
+  // spaceBetween: 50,
+  slidesPerView: 4,
 });

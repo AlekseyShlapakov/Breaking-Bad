@@ -1,43 +1,115 @@
-/*------Jesse-----------*/
+/*------Section second - Jesse-----------*/
 
 .section-second {
-    height: 800px;
-    padding-top: 155px;
+    height: 680px;
+    padding-top: 100px;
     position: relative;
-    background-image: url(../img/bg/bg-2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
 
+    @media (min-width: 450px) {
+        height: 900px;
+    }
+
+    @media (min-width: 768px) {
+        height: 600px;
+    }
+
+    @media (min-width: 1200px) {
+        height: 800px;
+    }
 }
 
 .row-section-second {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: column;
 
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+    }
 }
 
 .section-second__right {
-    margin-left: 30px;
-    position: relative;
+    display: none;
+    @media (min-width: 1200px){
+        display: block;
+        margin-left: 30px;
+        position: relative;
+        
+        &:before {
+            content: '';
+            background-image: url(../img/bg/bg-second.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 1135px;
+            height: 747px;
+            right: -134px;
+            top: -8px;
+        }
+    }
+}
+
+.section-second__right-medium {
+    display: none;
+        @media (min-width: 1000px) {
+            display: block;
+            margin-bottom: 40px;
+            margin-left: 30px;
+            position: relative;
+        
+            &:before {
+                content: '';
+                background-image: url(../img/bg/bg-second-medium.png);
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 1135px;
+                height: 747px;
+                right: -335px;
+                top: -6px;
+            }
+        }
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.section-second__right-small {
+    display: none;
+    @media (min-width: 770px) {
+        display: block;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        position: relative;
     
-
-    &:before {
-        content: '';
-        background-image: url(../img/bg/bg-second.png);
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 1135px;
-        height: 747px;
-        right: -134px;
-        top: -8px;
-
+            &:before {
+                content: '';
+                background-image: url(../img/bg/bg-second-small.png);
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 1135px;
+                height: 747px;
+                right: -575px;
+                top: -6px;
+            }
     }
 
+    @media (min-width: 1000px) {
+        display: none;
+
+    }
 }
 
-.section-second__img {
-    position: relative;
+.section-second__left {
+    margin-top: 250px;
+
+    @media (min-width: 670px) {
+        margin-top: 450px;
+    }
+
+    @media (min-width: 770px) {
+        margin-top: 0;
+    }
 }
 
-/*------End Jesse-----------*/
+
+/*------Section second - Jesse-----------*/
