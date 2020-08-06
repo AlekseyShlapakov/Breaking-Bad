@@ -379,32 +379,21 @@ font-family: 'Playfair Display', serif;*/
   cursor: pointer;
   position: relative;
 }
-.section-fourth__preview-img a {
-  display: block;
-  text-decoration: none;
-}
-.section-fourth__preview-img a:hover {
-  color: #DCEE19;
-  transition: all 0.3s ease-in;
-}
-.section-fourth__preview-img:hover,
-.section-fourth__preview-img:focus,
-.section-fourth__preview-img:active {
-  opacity: 0.5;
-  transition: all 0.3s ease-in;
-}
-.section-fourth__preview-img:before {
+.section-fourth__preview-img--hover {
   position: absolute;
-  content: '';
-  background-color: #242420;
-  width: 103px;
-  height: 141px;
-  opacity: 0;
+  margin-bottom: 15px;
 }
-.section-fourth__preview-img img {
+.section-fourth__preview-img--bg {
+  position: relative;
   width: 103px;
   height: 141px;
   margin-bottom: 15px;
+}
+.section-fourth__preview-img--bg:hover,
+.section-fourth__preview-img--bg:focus,
+.section-fourth__preview-img--bg:active {
+  opacity: 0;
+  transition: all 0.3s ease-in;
 }
 .section-fourth__preview-title {
   cursor: pointer;
