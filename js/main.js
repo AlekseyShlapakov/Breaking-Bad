@@ -45,7 +45,7 @@ document.querySelector ('.row-menu').addEventListener ('click', function (e) {
     secondText.style.display = 'block';
 
     secondText.classList.add('fade');
-    bgImg.style.backgroundImage = 'url(../img/header-img/jesse.png)';
+    bgImg.style.backgroundImage = 'url(./img/header-img/jesse.png)';
     // transition: all 0.3s ease-in;
     bgImg.style.transition = 'all 0.3s ease-in';
     secondText.style.transition = 'all 0.3s ease-in';
@@ -62,7 +62,7 @@ document.querySelector ('.row-menu__second').addEventListener ('click', function
     firstText.style.display = 'none';
     secondText.style.display = 'none';
     thirdText.style.display = 'block';
-    bgImg.style.backgroundImage = 'url(../img/header-img/mike.png)';
+    bgImg.style.backgroundImage = 'url(./img/header-img/mike.png)';
   } else if (
     target.hasAttribute ('data-direction') &&
     target.getAttribute ('data-direction') == 'left-second'
@@ -70,7 +70,7 @@ document.querySelector ('.row-menu__second').addEventListener ('click', function
     firstText.style.display = 'block';
     secondText.style.display = 'none';
     thirdText.style.display = 'none';
-    bgImg.style.backgroundImage = 'url(../img/header-img/walter.png)';
+    bgImg.style.backgroundImage = 'url(./img/header-img/walter.png)';
   }
 });
 
@@ -84,7 +84,7 @@ document.querySelector ('.row-menu__third').addEventListener ('click', function 
     firstText.style.display = 'none';
     secondText.style.display = 'block';
     thirdText.style.display = 'none';
-    bgImg.style.backgroundImage = 'url(../img/header-img/jesse.png)';
+    bgImg.style.backgroundImage = 'url(./img/header-img/jesse.png)';
   }
 });
 
