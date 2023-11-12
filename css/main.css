@@ -396,6 +396,7 @@ font-family: 'Playfair Display', serif;*/
   transition: all 0.3s ease-in;
 }
 .section-fourth__preview-title {
+  display: block;
   cursor: pointer;
 }
 .section-fourth__preview-title:hover,
