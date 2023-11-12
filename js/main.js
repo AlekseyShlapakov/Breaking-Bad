@@ -162,20 +162,21 @@ document.querySelector ('.section-fourth__arrows--second').addEventListener ('cl
 // });
 
 
-const actors = Array.from(document.querySelectorAll ('[data-description=section-fourth--actor]'));
-// console.log('actors', actors);
+const actors = Array.from(document.querySelectorAll ('.section-fourth__preview-img'));
+console.log('actors', actors);
 const walter = document.querySelector ('.section-fourth--walter');
 
-actors.map(actor => console.log(actor.className));
+// actors.map(actor => console.log(actor.className));
 
 document.querySelector ('.section-fourth__preview').addEventListener ('click', function (e) {
-  let target = e.target;
+  let target = e.target.closest('div');
   console.log('target', target);
 
-  actors.map(actor => {
-    if(target.className === actor.className) {
-      actor.style.display = 'block';
-      walter.style.display = 'none';
-    }
+  actors.map((actor, index) => {
+    
+    // if(target.className === actor.className) {
+    //   actor.style.display = 'block';
+    //   walter.style.display = 'none';
+    // }
   });
 });
