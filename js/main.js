@@ -47,7 +47,7 @@ document.querySelector ('.row-menu').addEventListener ('click', function (e) {
     secondText.classList.add('fade');
     bgImg.style.backgroundImage = 'url(./img/header-img/jesse.png)';
     // transition: all 0.3s ease-in;
-    bgImg.style.transition = 'all 0.3s ease-in';
+    bgImg.style.transition = 'all 0.5s ease-in';
     secondText.style.transition = 'all 0.3s ease-in';
   } 
 });
@@ -163,27 +163,30 @@ document.querySelector ('.section-fourth__arrows--second').addEventListener ('cl
 
 
 const actors = Array.from(document.querySelectorAll ('.section-fourth__preview-img'));
-console.log('actors', actors);
 const actorsPhotos = Array.from(document.querySelectorAll ('.section-fourth__right'));
-console.log('actorsPhotos', actorsPhotos);
 const actorsDescriptions = Array.from(document.querySelectorAll ('.section-fourth--actor'));
-console.log('actorsDescriptions', actorsDescriptions);
-
-const walter = document.querySelector ('.section-fourth-actor--walter');
-console.log('walter', walter);
+const bgPrevImages = Array.from(document.querySelectorAll ('.section-fourth__preview-img--bg'));
 
 actors.map((actor, index) => {
   actor.addEventListener('click', function () {
-    console.log(index);
+    actorsPhotos.map(photo => photo.style.display = 'none');
+    actorsDescriptions.map(description => description.style.display = 'none');
+    bgPrevImages.map((bgPrevImg, i) => {
+      i === index ? bgPrevImg.style.display = 'none' : bgPrevImg.style.display = 'block';
+    });
+
+    setTimeout(() => {
+      actorsPhotos[index].classList.remove('hidden');
+      actorsDescriptions[index].classList.remove('hidden');
+    });
+
+    actorsPhotos.map(photo => photo.classList.add('hidden'));
+    actorsDescriptions.map(description => description.classList.add('hidden'));
+
     actorsPhotos[index].style.display = 'block';
     actorsDescriptions[index].style.display = 'block';
-    walter.style.display = 'none';
     
   });
-  // if(target.className === actor.className) {
-  //   actor.style.display = 'block';
-  //   walter.style.display = 'none';
-  // }
 });
 
 

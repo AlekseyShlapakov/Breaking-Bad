@@ -82,4 +82,8 @@
   margin-top: 20px;
   cursor: pointer;
 }
+
+.section-fourth--actor {
+  min-height: 450px;
+}
 /*------ End Casts-----------*/

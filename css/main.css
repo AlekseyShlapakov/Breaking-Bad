@@ -71,6 +71,12 @@ font-family: 'Playfair Display', serif;*/
 .display-none {
   display: none;
 }
+.hidden {
+  opacity: 0;
+}
+.transition {
+  transition: all 3s ease-in;
+}
 .display-block {
   display: block;
 }
@@ -245,6 +251,7 @@ font-family: 'Playfair Display', serif;*/
   }
 }
 /*------Section second - Jesse-----------*/
+
 /*------Section third - Heisenberg-----------*/
 .section-third {
   padding-top: 100px;
@@ -333,11 +340,24 @@ font-family: 'Playfair Display', serif;*/
   background-repeat: no-repeat;
   background-position: center;
 }
-.row-section-fourth {
+/* .row-section-fourth {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+} */
+
+.row-section-fourth {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
+@media (min-width: 767px) {
+  .row-section-fourth {
+    flex-direction: row-reverse;
+  }
+}
+
+
 .section-fourth__right {
   margin-left: 30px;
 }
@@ -414,7 +434,11 @@ font-family: 'Playfair Display', serif;*/
   max-width: 600px;
   margin-left: 0;
 }
+.section-fourth--actor {
+  min-height: 450px;
+}
 /*------ End Casts-----------*/
+
 /*------Soundtrack-----------*/
 .section-fifth {
   height: 800px;
@@ -464,6 +488,7 @@ font-family: 'Playfair Display', serif;*/
   margin-bottom: 13px;
 }
 /*------End Soundtrack-----------*/
+
 /*------Watch all-----------*/
 .section-sixth {
   position: relative;
