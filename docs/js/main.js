@@ -47,7 +47,7 @@ document.querySelector ('.row-menu').addEventListener ('click', function (e) {
     secondText.classList.add('fade');
     bgImg.style.backgroundImage = 'url(./img/header-img/jesse.png)';
     // transition: all 0.3s ease-in;
-    bgImg.style.transition = 'all 0.3s ease-in';
+    bgImg.style.transition = 'all 0.5s ease-in';
     secondText.style.transition = 'all 0.3s ease-in';
   } 
 });
@@ -89,9 +89,126 @@ document.querySelector ('.row-menu__third').addEventListener ('click', function 
 });
 
 
-// Swaiper
-var mySwiper = new Swiper('.swiper-container', {
-  // speed: 400,
-  // spaceBetween: 50,
-  slidesPerView: 4,
+
+/*------ Slider section fourth! ---------*/
+
+
+const firstMiniaturesWrap = document.querySelector ('.section-fourth__miniatures--first');
+const secondMiniaturesWrap = document.querySelector ('.section-fourth__miniatures--second');
+const sectionFourArrowsFirst = document.querySelector ('.section-fourth__arrows--first');
+const sectionFourArrowsSecond = document.querySelector ('.section-fourth__arrows--second');
+
+const test = document.querySelector ('.section-fourth__arrow');
+
+document.querySelector ('.section-fourth__arrows--first').addEventListener ('click', function (e) {
+  let target = e.target;
+
+  if (
+    target.hasAttribute ('data-direction--miniatures') &&
+    target.getAttribute ('data-direction--miniatures') == 'right'
+  ) {
+    firstMiniaturesWrap.style.display = 'none';
+    secondMiniaturesWrap.style.display = 'block';
+
+    sectionFourArrowsFirst.style.display = 'none';
+    sectionFourArrowsSecond.style.display = 'block';
+
+    firstMiniaturesWrap.style.transition = 'all 0.5s ease-in';
+    secondMiniaturesWrap.style.transition = 'all 0.5s ease-in';
+  }
 });
+
+document.querySelector ('.section-fourth__arrows--second').addEventListener ('click', function (e) {
+  let target = e.target;
+
+  if (
+    target.hasAttribute ('data-direction--miniatures') &&
+    target.getAttribute ('data-direction--miniatures') == 'left'
+  ) {
+    firstMiniaturesWrap.style.display = 'block';
+    secondMiniaturesWrap.style.display = 'none';
+
+    sectionFourArrowsFirst.style.display = 'block';
+    sectionFourArrowsSecond.style.display = 'none';
+
+    firstMiniaturesWrap.style.transition = 'all 0.5s ease-in';
+    secondMiniaturesWrap.style.transition = 'all 0.5s ease-in';
+  } 
+});
+
+
+
+// const firstMiniaturesWrap = document.querySelector ('.section-fourth__miniatures--first');
+// const firstArrow = document.querySelector ('.arrow-opacity');
+
+// const secondMiniaturesWrap = document.querySelector ('.section-fourth__miniatures--second');
+
+// // const thirdText = document.querySelector ('.middle-panel__third-text');
+
+// document.querySelector ('.section-fourth__arrow').addEventListener ('click', function (e) {
+//   let target = e.target;
+
+//   if (
+//     target.hasAttribute ('data-direction--miniatures') &&
+//     target.getAttribute ('data-direction--miniatures') == 'right'
+//   ) {
+//     firstMiniaturesWrap.style.display = 'none';
+//     firstArrow.style.display = 'row-menu__right--opacity';
+//     secondMiniaturesWrap.style.display = 'block';
+
+//     firstMiniaturesWrap.style.transition = 'all 0.5s ease-in';
+//     secondMiniaturesWrap.style.transition = 'all 0.5s ease-in';
+//   } 
+// });
+
+
+const actors = Array.from(document.querySelectorAll ('.section-fourth__preview-img'));
+const actorsPhotos = Array.from(document.querySelectorAll ('.section-fourth__right'));
+const actorsDescriptions = Array.from(document.querySelectorAll ('.section-fourth--actor'));
+const bgPrevImages = Array.from(document.querySelectorAll ('.section-fourth__preview-img--bg'));
+
+actors.map((actor, index) => {
+  actor.addEventListener('click', function () {
+    actorsPhotos.map(photo => photo.style.display = 'none');
+    actorsDescriptions.map(description => description.style.display = 'none');
+    bgPrevImages.map((bgPrevImg, i) => {
+      i === index ? bgPrevImg.style.display = 'none' : bgPrevImg.style.display = 'block';
+    });
+
+    setTimeout(() => {
+      actorsPhotos[index].classList.remove('hidden');
+      actorsDescriptions[index].classList.remove('hidden');
+    });
+
+    actorsPhotos.map(photo => photo.classList.add('hidden'));
+    actorsDescriptions.map(description => description.classList.add('hidden'));
+
+    actorsPhotos[index].style.display = 'block';
+    actorsDescriptions[index].style.display = 'block';
+    
+  });
+});
+
+
+
+
+
+
+
+
+// actors.map(actor => console.log(actor.className));
+
+// document.querySelector ('.section-fourth__preview').addEventListener ('click', function (e) {
+//   let target = e.target.closest('div');
+//   console.log('target', target);
+
+//   actors.map((actor, index) => {
+//     actor.addEventListener('click', function () {
+//       console.log(index);
+//     });
+//     // if(target.className === actor.className) {
+//     //   actor.style.display = 'block';
+//     //   walter.style.display = 'none';
+//     // }
+//   });
+// });

@@ -61,42 +61,24 @@
 .section-fourth__preview-img {
   cursor: pointer;
   position: relative;
+}
 
-  a {
-    display: block;
-    text-decoration: none;
+.section-fourth__preview-img--hover {
+  position: absolute;
+  margin-bottom: 15px;
+}
 
-    &:hover {
-      color: #DCEE19;
-      transition: all 0.3s ease-in;
-    }
-
-
-  }
+.section-fourth__preview-img--bg {
+  position: relative;
+  width: 103px;
+  height: 141px;
+  margin-bottom: 15px;
 
   &:hover,
   &:focus,
   &:active {
-    opacity: 0.5;
-    transition: all 0.3s ease-in;
-  }
-
-
-  &:before {
-    position: absolute;
-    content: '';
-    background-color: #242420;
-    width: 103px;
-    height: 141px;
     opacity: 0;
-
-  }
-
-  img {
-    width: 103px;
-    height: 141px;
-    margin-bottom: 15px;
-
+    transition: all 0.3s ease-in;
   }
 }
 
