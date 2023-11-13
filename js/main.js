@@ -164,19 +164,48 @@ document.querySelector ('.section-fourth__arrows--second').addEventListener ('cl
 
 const actors = Array.from(document.querySelectorAll ('.section-fourth__preview-img'));
 console.log('actors', actors);
-const walter = document.querySelector ('.section-fourth--walter');
+const actorsPhotos = Array.from(document.querySelectorAll ('.section-fourth__right'));
+console.log('actorsPhotos', actorsPhotos);
+const actorsDescriptions = Array.from(document.querySelectorAll ('.section-fourth--actor'));
+console.log('actorsDescriptions', actorsDescriptions);
+
+const walter = document.querySelector ('.section-fourth-actor--walter');
+console.log('walter', walter);
+
+actors.map((actor, index) => {
+  actor.addEventListener('click', function () {
+    console.log(index);
+    actorsPhotos[index].style.display = 'block';
+    actorsDescriptions[index].style.display = 'block';
+    walter.style.display = 'none';
+    
+  });
+  // if(target.className === actor.className) {
+  //   actor.style.display = 'block';
+  //   walter.style.display = 'none';
+  // }
+});
+
+
+
+
+
+
+
 
 // actors.map(actor => console.log(actor.className));
 
-document.querySelector ('.section-fourth__preview').addEventListener ('click', function (e) {
-  let target = e.target.closest('div');
-  console.log('target', target);
+// document.querySelector ('.section-fourth__preview').addEventListener ('click', function (e) {
+//   let target = e.target.closest('div');
+//   console.log('target', target);
 
-  actors.map((actor, index) => {
-    
-    // if(target.className === actor.className) {
-    //   actor.style.display = 'block';
-    //   walter.style.display = 'none';
-    // }
-  });
-});
+//   actors.map((actor, index) => {
+//     actor.addEventListener('click', function () {
+//       console.log(index);
+//     });
+//     // if(target.className === actor.className) {
+//     //   actor.style.display = 'block';
+//     //   walter.style.display = 'none';
+//     // }
+//   });
+// });
