@@ -162,17 +162,23 @@ document.querySelector ('.section-fourth__arrows--second').addEventListener ('cl
 // });
 
 
+/*--------- Rouls slider ---------*/
+
 const actors = Array.from(document.querySelectorAll ('.section-fourth__preview-img'));
 const actorsPhotos = Array.from(document.querySelectorAll ('.section-fourth__right'));
 const actorsDescriptions = Array.from(document.querySelectorAll ('.section-fourth--actor'));
 const bgPrevImages = Array.from(document.querySelectorAll ('.section-fourth__preview-img--bg'));
+const prevLinks = Array.from(document.querySelectorAll ('.section-fourth__preview-title'));
 
 actors.map((actor, index) => {
   actor.addEventListener('click', function () {
     actorsPhotos.map(photo => photo.style.display = 'none');
     actorsDescriptions.map(description => description.style.display = 'none');
     bgPrevImages.map((bgPrevImg, i) => {
-      i === index ? bgPrevImg.style.display = 'none' : bgPrevImg.style.display = 'block';
+      i === index ? bgPrevImg.classList.add('hidden') : bgPrevImg.classList.remove('hidden');
+    });
+    prevLinks.map((prevLink, i) => {
+      i === index ? prevLink.classList.add('acent-color') : prevLink.classList.remove('acent-color');
     });
 
     setTimeout(() => {

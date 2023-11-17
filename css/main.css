@@ -74,6 +74,12 @@ font-family: 'Playfair Display', serif;*/
 .hidden {
   opacity: 0;
 }
+.visible {
+  opacity: 1;
+}
+.acent-color {
+  color: #DCEE19;
+}
 .transition {
   transition: all 3s ease-in;
 }
