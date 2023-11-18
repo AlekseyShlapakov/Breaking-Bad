@@ -137,42 +137,23 @@ document.querySelector ('.section-fourth__arrows--second').addEventListener ('cl
 });
 
 
-
-// const firstMiniaturesWrap = document.querySelector ('.section-fourth__miniatures--first');
-// const firstArrow = document.querySelector ('.arrow-opacity');
-
-// const secondMiniaturesWrap = document.querySelector ('.section-fourth__miniatures--second');
-
-// // const thirdText = document.querySelector ('.middle-panel__third-text');
-
-// document.querySelector ('.section-fourth__arrow').addEventListener ('click', function (e) {
-//   let target = e.target;
-
-//   if (
-//     target.hasAttribute ('data-direction--miniatures') &&
-//     target.getAttribute ('data-direction--miniatures') == 'right'
-//   ) {
-//     firstMiniaturesWrap.style.display = 'none';
-//     firstArrow.style.display = 'row-menu__right--opacity';
-//     secondMiniaturesWrap.style.display = 'block';
-
-//     firstMiniaturesWrap.style.transition = 'all 0.5s ease-in';
-//     secondMiniaturesWrap.style.transition = 'all 0.5s ease-in';
-//   } 
-// });
-
+/*--------- Rouls slider ---------*/
 
 const actors = Array.from(document.querySelectorAll ('.section-fourth__preview-img'));
 const actorsPhotos = Array.from(document.querySelectorAll ('.section-fourth__right'));
 const actorsDescriptions = Array.from(document.querySelectorAll ('.section-fourth--actor'));
 const bgPrevImages = Array.from(document.querySelectorAll ('.section-fourth__preview-img--bg'));
+const prevLinks = Array.from(document.querySelectorAll ('.section-fourth__preview-title'));
 
 actors.map((actor, index) => {
   actor.addEventListener('click', function () {
     actorsPhotos.map(photo => photo.style.display = 'none');
     actorsDescriptions.map(description => description.style.display = 'none');
     bgPrevImages.map((bgPrevImg, i) => {
-      i === index ? bgPrevImg.style.display = 'none' : bgPrevImg.style.display = 'block';
+      i === index ? bgPrevImg.classList.add('hidden') : bgPrevImg.classList.remove('hidden');
+    });
+    prevLinks.map((prevLink, i) => {
+      i === index ? prevLink.classList.add('acent-color') : prevLink.classList.remove('acent-color');
     });
 
     setTimeout(() => {
@@ -189,26 +170,65 @@ actors.map((actor, index) => {
   });
 });
 
+/*--------- Rouls mobile slider ---------*/
+
+const actorsSliderArrowsLeft = Array.from(document.querySelectorAll ('.section-four__miniatures-arrow--left'));
+
+const actorsSliderArrowsRight = Array.from(document.querySelectorAll ('.section-four__miniatures-arrow--right'));
+
+actorsSliderArrowsRight.map((arrow, index) => {
+  arrow.addEventListener('click', function () {
+    actorsPhotos.map(photo => photo.style.display = 'none');
+    actorsDescriptions.map(description => description.style.display = 'none');
+
+    setTimeout(() => {
+      if (index === actorsSliderArrowsRight.length - 1) {
+        actorsPhotos[0].classList.remove('hidden');
+        actorsDescriptions[0].classList.remove('hidden');
+      } else {
+        actorsPhotos[index + 1].classList.remove('hidden');
+        actorsDescriptions[index + 1].classList.remove('hidden');
+      }
+    });
+
+    actorsPhotos.map(photo => photo.classList.add('hidden'));
+    actorsDescriptions.map(description => description.classList.add('hidden'));
+
+    if (index === actorsSliderArrowsRight.length - 1) {
+      actorsPhotos[0].style.display = 'block';
+      actorsDescriptions[0].style.display = 'block';
+    } else {
+      actorsPhotos[index + 1].style.display = 'block';
+      actorsDescriptions[index + 1].style.display = 'block';
+    }
+  })
+})
 
 
+actorsSliderArrowsLeft.map((arrow, index) => {
+  arrow.addEventListener('click', function () {
+    actorsPhotos.map(photo => photo.style.display = 'none');
+    actorsDescriptions.map(description => description.style.display = 'none');
 
+    setTimeout(() => {
+      if (index === 0) {
+        actorsPhotos[actorsSliderArrowsRight.length - 1].classList.remove('hidden');
+        actorsDescriptions[actorsSliderArrowsRight.length - 1].classList.remove('hidden');
+      } else {
+        actorsPhotos[index - 1].classList.remove('hidden');
+        actorsDescriptions[index - 1].classList.remove('hidden');
+      }
+    });
 
+    actorsPhotos.map(photo => photo.classList.add('hidden'));
+    actorsDescriptions.map(description => description.classList.add('hidden'));
 
-
-
-// actors.map(actor => console.log(actor.className));
-
-// document.querySelector ('.section-fourth__preview').addEventListener ('click', function (e) {
-//   let target = e.target.closest('div');
-//   console.log('target', target);
-
-//   actors.map((actor, index) => {
-//     actor.addEventListener('click', function () {
-//       console.log(index);
-//     });
-//     // if(target.className === actor.className) {
-//     //   actor.style.display = 'block';
-//     //   walter.style.display = 'none';
-//     // }
-//   });
-// });
+    if (index === 0) {
+      actorsPhotos[actorsSliderArrowsRight.length - 1].style.display = 'block';
+      actorsDescriptions[actorsSliderArrowsRight.length - 1].style.display = 'block';
+    } else {
+      actorsPhotos[index - 1].style.display = 'block';
+      actorsDescriptions[index - 1].style.display = 'block';
+    }
+  })
+})

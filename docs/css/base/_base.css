@@ -34,7 +34,7 @@
 }
 @media (min-width: 321px) {
   .section__text {
-    width: 350px;
+    width: 340px;
   }
 }
 @media (min-width: 1025px) {
@@ -43,13 +43,11 @@
     font-size: 15px;
   }
 }
-.img-adaptive {
+.img-adaptive,
+.text-adaptive {
   display: block;
   max-width: 100%;
   max-height: 100%;
-}
-.hidden {
-  opacity: 0;
 }
 .display-none {
   display: none;
@@ -59,4 +57,10 @@
 }
 .transition {
   transition: all 3s ease-in;
+}
+.hidden {
+  opacity: 0;
+}
+.acent-color {
+  color: #DCEE19;
 }

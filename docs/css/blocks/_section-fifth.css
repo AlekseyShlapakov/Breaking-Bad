@@ -11,6 +11,15 @@
   display: flex;
   justify-content: space-between;
 }
+.row-section-fifth {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 769px) {
+  .row-section-fifth {
+    flex-direction: row-reverse;
+  }
+}
 .section-fifth__left {
   width: 460px;
 }

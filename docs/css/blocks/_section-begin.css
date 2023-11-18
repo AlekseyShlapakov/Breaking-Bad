@@ -12,7 +12,7 @@
   justify-content: space-between;
   flex-direction: column;
 }
-@media (min-width: 767px) {
+@media (min-width: 769px) {
   .row-section-begin {
     flex-direction: row;
   }
@@ -42,7 +42,7 @@
     padding-bottom: 0;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 769px) {
   .section-begin__right {
     margin-left: 55px;
   }

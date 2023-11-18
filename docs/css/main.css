@@ -63,7 +63,8 @@ font-family: 'Playfair Display', serif;*/
     font-size: 15px;
   }
 }
-.img-adaptive {
+.img-adaptive,
+.text-adaptive {
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -71,14 +72,17 @@ font-family: 'Playfair Display', serif;*/
 .display-none {
   display: none;
 }
-.hidden {
-  opacity: 0;
+.display-block {
+  display: block;
 }
 .transition {
   transition: all 3s ease-in;
 }
-.display-block {
-  display: block;
+.hidden {
+  opacity: 0;
+}
+.acent-color {
+  color: #DCEE19;
 }
 .section-begin {
   height: 800px;
@@ -251,7 +255,6 @@ font-family: 'Playfair Display', serif;*/
   }
 }
 /*------Section second - Jesse-----------*/
-
 /*------Section third - Heisenberg-----------*/
 .section-third {
   padding-top: 100px;
@@ -340,26 +343,52 @@ font-family: 'Playfair Display', serif;*/
   background-repeat: no-repeat;
   background-position: center;
 }
-/* .row-section-fourth {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-} */
-
 .row-section-fourth {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-@media (min-width: 767px) {
+@media (min-width: 769px) {
   .row-section-fourth {
     flex-direction: row-reverse;
   }
 }
-
-
 .section-fourth__right {
-  margin-left: 30px;
+  margin-left: 0px;
+  position: relative;
+}
+@media (min-width: 769px) {
+  .section-fourth__right {
+    margin-left: 30px;
+  }
+}
+.section-four__miniatures-arrow--left {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: 5%;
+  top: 50%;
+  bottom: 0;
+}
+@media (min-width: 769px) {
+  .section-four__miniatures-arrow--left {
+    display: none;
+  }
+}
+.section-four__miniatures-arrow--right {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: 95%;
+  top: 50%;
+  bottom: 0;
+}
+@media (min-width: 769px) {
+  .section-four__miniatures-arrow--right {
+    display: none;
+  }
 }
 .section-fourth__right-jesse {
   display: none;
@@ -380,12 +409,21 @@ font-family: 'Playfair Display', serif;*/
   margin-bottom: 30px;
 }
 .section-fourth__text {
-  width: 540px;
-  font-family: 'Proxima Nova';
-  font-size: 15px;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 14px;
   line-height: 170%;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 35px;
+}
+@media (min-width: 769px) {
+  .section-fourth__text {
+    width: 540px;
+    font-family: 'Proxima Nova';
+    font-size: 15px;
+    line-height: 170%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 35px;
+  }
 }
 .section-fourth__text p {
   margin: 0;
@@ -416,8 +454,8 @@ font-family: 'Playfair Display', serif;*/
   transition: all 0.3s ease-in;
 }
 .section-fourth__preview-title {
-  display: block;
   cursor: pointer;
+  display: block;
 }
 .section-fourth__preview-title:hover,
 .section-fourth__preview-title:focus,
@@ -430,15 +468,25 @@ font-family: 'Playfair Display', serif;*/
   margin-top: 20px;
   cursor: pointer;
 }
+.section-fourth__miniatures--first,
+.section-fourth__arrows--first {
+  display: none;
+}
+@media (min-width: 769px) {
+  .section-fourth__miniatures--first,
+  .section-fourth__arrows--first {
+    display: block;
+  }
+}
+.section-fourth--actor {
+  min-height: 450px;
+  margin-top: 40px;
+}
 .swiper-container {
   max-width: 600px;
   margin-left: 0;
 }
-.section-fourth--actor {
-  min-height: 450px;
-}
 /*------ End Casts-----------*/
-
 /*------Soundtrack-----------*/
 .section-fifth {
   height: 800px;
@@ -451,6 +499,15 @@ font-family: 'Playfair Display', serif;*/
 .row-section-fifth {
   display: flex;
   justify-content: space-between;
+}
+.row-section-fifth {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 769px) {
+  .row-section-fifth {
+    flex-direction: row-reverse;
+  }
 }
 .section-fifth__left {
   width: 460px;
@@ -488,7 +545,6 @@ font-family: 'Playfair Display', serif;*/
   margin-bottom: 13px;
 }
 /*------End Soundtrack-----------*/
-
 /*------Watch all-----------*/
 .section-sixth {
   position: relative;
@@ -911,7 +967,7 @@ input {
   margin-bottom: 30px;
 }
 .mobile-nav__link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .mobile-nav__link:hover,
@@ -1163,6 +1219,7 @@ input {
 }
 /*---------- End footer head ---------*/
 /*--------- Header ----------*/
+/*--------- Footer ----------*/
 .footer {
   width: 100%;
   height: 187px;
@@ -1191,3 +1248,4 @@ input {
 .footer__left-menu:last-child {
   margin-right: 0;
 }
+/*--------- End Footer ----------*/

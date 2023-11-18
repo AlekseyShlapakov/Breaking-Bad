@@ -1,11 +1,12 @@
 // desc
+@import "../base/_variables.less";
 
 .section__title {
-    font-family: 'Cooper Md BT';
+    font-family: @title;
     font-weight: normal;
     font-size: 40px;
     line-height: 62px;
-    color: #DCEE19;
+    color: @akcent;
     margin: 0;
     margin-bottom: 19px;
 
@@ -19,7 +20,7 @@
 }
 
 .section__subtitle {
-    font-family: 'Cooper Md BT';
+    font-family: @title;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 6px;
@@ -27,7 +28,7 @@
 
 .section__text {
     width: 290px;
-    font-family: 'Proxima Nova';
+    font-family: @text;
     font-size: 14px;
     line-height: 170%;
     color: rgba(255, 255, 255, 0.8);
@@ -49,7 +50,7 @@
     }
 }
 
-.img-adaptive {
+.img-adaptive, .text-adaptive {
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -71,6 +72,8 @@
     opacity: 0;
 }
 
-
+.acent-color {
+    color: @akcent;
+}
 
 // end desc

@@ -1,4 +1,5 @@
 /*------Casts-----------*/
+@import "../base/_variables.less";
 
 .section-fourth {
   height: 800px;
@@ -11,11 +12,50 @@
 .row-section-fourth {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: column;
+
+  @media (min-width: 769px) {
+      flex-direction: row-reverse;
+
+  }
 }
 
 .section-fourth__right {
-  margin-left: 30px;
+  margin-left: 0px;
+  position: relative;
+
+  @media (min-width: 769px) {
+      margin-left: 30px;
+
+  }
+}
+
+.section-four__miniatures-arrow--left {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: 5%;
+  top: 50%;
+  bottom: 0;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.section-four__miniatures-arrow--right {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: 95%;
+  top: 50%;
+  bottom: 0;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 }
 
 .section-fourth__right-jesse {
@@ -23,36 +63,44 @@
 }
 
 .section-fourth__subtitle {
-  font-family: 'Cooper Md BT';
+  font-family: @title;
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 12px;
 }
 
 .section-fourth__title {
-  font-family: 'Cooper Md BT';
+  font-family: @title;
   font-weight: normal;
   font-size: 50px;
   line-height: 60px;
-  color: #DCEE19;
+  color: @akcent;
   margin: 0;
   margin-bottom: 30px;
 }
 
 .section-fourth__text {
-  width: 540px;
-  font-family: 'Proxima Nova';
-  font-size: 15px;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 14px;
   line-height: 170%;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 35px;
+
+
+  @media (min-width: 769px) {
+    width: 540px;
+    font-family: @text;
+    font-size: 15px;
+    line-height: 170%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 35px;
+  }
 }
 
 .section-fourth__text p {
   margin: 0;
   margin-bottom: 10px;
 }
-
 .section-fourth__preview {
   display: flex;
   justify-content: space-between;
@@ -84,11 +132,12 @@
 
 .section-fourth__preview-title {
   cursor: pointer;
+  display: block;
 
   &:hover,
   &:focus,
   &:active {
-    color: #DCEE19;
+    color: @akcent;
     transition: all 0.3s ease-in;
   }
 
@@ -98,6 +147,25 @@
   margin-right: 40px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.section-fourth__miniatures--first, 
+.section-fourth__arrows--first {
+    display: none;
+  @media (min-width: 769px) {
+    display: block;
+  }
+}
+
+// .section-fourth__arrows--first {
+//   @media (min-width: 769px) {
+//     display: none;
+//   }
+// }
+
+.section-fourth--actor {
+  min-height: 450px;
+  margin-top: 40px;
 }
 
 .swiper-container {

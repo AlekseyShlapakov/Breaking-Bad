@@ -3,16 +3,21 @@
   overflow: hidden;
   position: relative;
   background-color: #000;
-  height: 1600px;
+  height: 1280px;
 }
-@media (min-width: 667px) {
+@media (min-width: 450px) {
   .header {
-    height: 1100px;
+    height: 1390px;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 767px) {
   .header {
-    height: 1200px;
+    height: 1000px;
+  }
+}
+@media (min-width: 979px) {
+  .header {
+    height: 1390px;
   }
 }
 @media (min-width: 1200px) {
@@ -30,7 +35,7 @@
   background-image: url(../img/header-img/walter-m.jpg);
   background-repeat: no-repeat;
   background-position-x: 52%;
-  height: 600px;
+  height: 620px;
 }
 @media (min-width: 667px) {
   .header .wrapper {
@@ -60,6 +65,26 @@
     padding: 0 30px;
   }
 }
+.container-bg {
+  background-image: url(../img/bg/bg-s.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+@media (min-width: 769px) {
+  .container-bg {
+    background-image: none;
+  }
+}
+.container-bg--second {
+  background-image: url(../img/bg/bg-s2.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+@media (min-width: 769px) {
+  .container-bg--second {
+    background-image: none;
+  }
+}
 .container-big {
   width: 1440px;
 }
@@ -68,6 +93,7 @@
   height: 115px;
   color: #FFF;
   position: fixed;
+  z-index: 20;
 }
 .row-top-panel {
   display: flex;
@@ -208,7 +234,7 @@
   margin-bottom: 30px;
 }
 .mobile-nav__link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .mobile-nav__link:hover,
@@ -257,7 +283,7 @@
 .middle-panel__slogan {
   font-size: 20px;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .middle-panel__title {
   display: none;
@@ -277,7 +303,7 @@
   display: none;
   margin-bottom: 50px;
 }
-@media (min-width: 769px) {
+@media (min-width: 855px) {
   .middle-panel__title-medium {
     display: block;
   }
@@ -291,7 +317,7 @@
   display: block;
   margin-bottom: 37px;
 }
-@media (min-width: 769px) {
+@media (min-width: 855px) {
   .middle-panel__title-small {
     display: none;
   }
@@ -341,6 +367,20 @@
     font-size: 15px;
   }
 }
+.row-menu {
+  display: flex;
+  margin-top: 20px;
+}
+.row-menu__left {
+  margin-right: 35px;
+  cursor: pointer;
+}
+.row-menu__right {
+  cursor: pointer;
+}
+.row-menu__right--opacity {
+  opacity: 0.5;
+}
 /*------------- End Middle head ---------------*/
 /*---------- Footer head -------------*/
 .footer-panel {
@@ -362,9 +402,14 @@
   }
 }
 .row-footer-panel {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  display: none;
+}
+@media (min-width: 415px) {
+  .row-footer-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 .footer-panel__left {
   display: flex;
@@ -425,6 +470,18 @@
 @media (min-width: 769px) {
   .footer-panel__lang {
     display: none;
+  }
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 7.5s;
+}
+@keyframes fade {
+  from {
+    opasity: 0.1;
+  }
+  to {
+    opasity: 1;
   }
 }
 /*---------- End footer head ---------*/
