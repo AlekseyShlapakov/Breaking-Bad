@@ -11,7 +11,12 @@
 .row-section-fourth {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: column;
+
+  @media (min-width: 769px) {
+      flex-direction: row-reverse;
+
+  }
 }
 
 .section-fourth__right {
@@ -84,6 +89,7 @@
 
 .section-fourth__preview-title {
   cursor: pointer;
+  display: block;
 
   &:hover,
   &:focus,
@@ -98,6 +104,10 @@
   margin-right: 40px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.section-fourth--actor {
+  min-height: 450px;
 }
 
 .swiper-container {

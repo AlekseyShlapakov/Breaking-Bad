@@ -9,7 +9,12 @@
 .row-section-fourth {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .row-section-fourth {
+    flex-direction: row-reverse;
+  }
 }
 .section-fourth__right {
   margin-left: 30px;
@@ -70,6 +75,7 @@
 }
 .section-fourth__preview-title {
   cursor: pointer;
+  display: block;
 }
 .section-fourth__preview-title:hover,
 .section-fourth__preview-title:focus,
@@ -82,8 +88,11 @@
   margin-top: 20px;
   cursor: pointer;
 }
-
 .section-fourth--actor {
   min-height: 450px;
+}
+.swiper-container {
+  max-width: 600px;
+  margin-left: 0;
 }
 /*------ End Casts-----------*/
