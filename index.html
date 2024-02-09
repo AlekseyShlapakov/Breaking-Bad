@@ -846,13 +846,13 @@
     <!--// Section-fourth -->
 
     <!-- Section-fifth -->
-    <div id="Сontained" class="section-fifth display-none">
+    <div id="Сontained" class="section-fifth">
       <div class="container">
         <div class="row-section-fifth">
           <div class="section-fifth__right">
             <img
               src="./img/soundtrack.png"
-              class="section-fifth__img"
+              class="section-fifth__img begin-img"
               alt="Breaking Bad Soundtrack"
             />
           </div>
@@ -927,7 +927,7 @@
     <!--// Section-fifth -->
 
     <!--Section-sixth  -->
-    <div id="Subscription" class="section-sixth display-none">
+    <div id="Subscription" class="section-sixth">
       <div class="container">
         <div class="row-section-sixth">
           <div class="section-sixth__left">
@@ -973,11 +973,52 @@
                     id="list[1]"
                   />
                   <label for="list[1]">2 season</label>
+                  <label for="list[1]">3 season</label>
+                  <label for="list[1]">4 season</label>
+                  <label for="list[1]">5 season</label>
                 </div>
               </label>
             </div>
             <div class="section-sixth__right-form">
-              <form action="formdata" method="post" name="form1">
+              <label
+              for="select"
+              class="select2"
+              action="formdata"
+              method="post"
+              name="form1"
+            >
+              <input
+                type="radio"
+                name="list"
+                value="not_changed"
+                id="bg"
+                checked
+              />
+              <input
+                type="radio"
+                name="list"
+                value="not_changed"
+                id="select"
+              />
+              <label class="bg" for="bg"></label>
+              <div class="items">
+                <input
+                  type="radio"
+                  name="list"
+                  value="first_value"
+                  id="list[0]"
+                />
+                <label for="list[0]">1 episode</label>
+                <input
+                  type="radio"
+                  name="list"
+                  value="second_value"
+                  id="list[1]"
+                />
+                <label for="list[1]">2 episode</label>
+              </div>
+            </label>
+              <!-- <form action="formdata" method="post" name="form1">
                 <p>
                   <select name="list1">
                     <option>Series</option>
@@ -988,7 +1029,7 @@
                     <option>5 season</option>
                   </select>
                 </p>
-              </form>
+              </form> -->
             </div>
           </div>
         </div>
@@ -1032,7 +1073,23 @@
         </div>
       </div>
     </div>
+
+    
     <!--//Section-sixth  -->
+    <div class="container navigation">
+      <nav class="nav-1">
+        <ul>
+          <li class="nav-item" data-description='sub-navigation'>Menu
+            <ul class="sub-navigation display-none">
+              <li><a href="#">1 пункт</a></li>
+              <li><a href="#">2 пункт</a></li>
+              <li><a href="#">3 пункт</a></li>
+              <li><a href="#">4 пункт</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- Footer -->
     <div class="footer display-none">

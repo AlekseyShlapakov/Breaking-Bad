@@ -34,6 +34,19 @@ const secondText = document.querySelector ('.middle-panel__second-text');
 
 const thirdText = document.querySelector ('.middle-panel__third-text');
 
+const subNav = document.querySelector('.sub-navigation');
+
+document.querySelector('.navigation').addEventListener('click', function(e) {
+  let target = e.target;
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'sub-navigation'
+  ) {
+    subNav.style.display = 'block';
+  }
+
+})
+
 document.querySelector ('.row-menu').addEventListener ('click', function (e) {
   let target = e.target;
 
