@@ -26,14 +26,24 @@ body {
 }
 .nav-item {
   position: relative;
+  background-image: url('/folders/Breaking-Bad/img/season\ 3.svg');
+  background-repeat: no-repeat;
+  background-position: left;
   cursor: pointer;
+  height: 50px;
+}
+.nav-item p {
+  position: absolute;
+  left: 15px;
+  top: 15px;
 }
 .sub-navigation {
   position: absolute;
+  margin-top: 47px;
   left: 0;
 }
 .sub-navigation li {
-  padding: 10px 10px 10px 5px;
+  padding: 10px 80px 10px 13px;
   border: 1px solid #ddd;
 }
 .sub-navigation li:hover {

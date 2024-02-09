@@ -43,9 +43,16 @@ document.querySelector('.navigation').addEventListener('click', function(e) {
     target.getAttribute ('data-description') == 'sub-navigation'
   ) {
     subNav.style.display = 'block';
-  }
-
+  } 
 })
+
+
+
+// document.onclick = function (e) {
+//   if (e.target.className !== "navigation") {
+//     subNav.style.display = "none";
+//   };
+// };
 
 document.querySelector ('.row-menu').addEventListener ('click', function (e) {
   let target = e.target;
