@@ -48,6 +48,20 @@ document.querySelector('.navigation').addEventListener('click', function(e) {
 
 
 
+document.querySelector('.sub-navigation').addEventListener('click', function (e) {
+
+  const target = e.target;
+
+  e.preventDefault();
+
+  document.querySelector('.nav-item p').innerHTML = target.innerHTML;
+
+  subNav.style.display = 'none';
+
+})
+
+
+
 // document.onclick = function (e) {
 //   if (e.target.className !== "navigation") {
 //     subNav.style.display = "none";
