@@ -21,11 +21,12 @@ body {
   margin-top: 100px;
   padding-bottom: 100px;
 }
-.nav-1 {
+.select-1,
+.select-2 {
   width: 200px;
 }
-.nav-item,
-.nav-2__item {
+.select-item,
+.select-2__item {
   position: relative;
   background-image: url('../img/season\ 3.svg');
   background-repeat: no-repeat;
@@ -33,27 +34,31 @@ body {
   cursor: pointer;
   height: 50px;
 }
-.nav-item p {
+.select-item p,
+.select-2__item p {
   position: absolute;
   left: 15px;
   top: 15px;
 }
-.nav-2__item p {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-}
-.sub-navigation {
+.sub-items,
+.select-2__sub-items {
   position: absolute;
   margin-top: 47px;
   left: 0;
 }
-.sub-navigation li {
+.sub-items li,
+.select-2__sub-items li {
   padding: 10px 73px 10px 13px;
   border: 1px solid #ddd;
 }
-.sub-navigation li:hover {
+.sub-items li a:hover,
+.select-2__sub-items li a:hover {
+  color: #DCEE19;
   background: transparent;
+}
+.wrap__img-test {
+  display: flex;
+  justify-content: center;
 }
 /*
 font-family: 'Montserrat', sans-serif;

@@ -34,39 +34,6 @@ const secondText = document.querySelector ('.middle-panel__second-text');
 
 const thirdText = document.querySelector ('.middle-panel__third-text');
 
-const subNav = document.querySelector('.sub-navigation');
-
-document.querySelector('.navigation').addEventListener('click', function(e) {
-  let target = e.target;
-  if(
-    target.hasAttribute('data-description') &&
-    target.getAttribute ('data-description') == 'sub-navigation'
-  ) {
-    subNav.style.display = 'block';
-  } 
-})
-
-
-
-document.querySelector('.sub-navigation').addEventListener('click', function (e) {
-
-  const target = e.target;
-
-  e.preventDefault();
-
-  document.querySelector('.nav-item p').innerHTML = target.innerHTML;
-
-  subNav.style.display = 'none';
-
-})
-
-
-
-// document.onclick = function (e) {
-//   if (e.target.className !== "navigation") {
-//     subNav.style.display = "none";
-//   };
-// };
 
 document.querySelector ('.row-menu').addEventListener ('click', function (e) {
   let target = e.target;
@@ -266,3 +233,119 @@ actorsSliderArrowsLeft.map((arrow, index) => {
     }
   })
 })
+
+/*--------- End rouls mobile slider ---------*/
+
+/*--------- Select seasons ----------*/
+
+const subSelectItems = document.querySelector('.sub-items');
+const subSelectItems2 = document.querySelector('.sub-items-2');
+
+const subSelectItemsSeasonOne = document.querySelector('.season-1');
+const subSelectItemsSeasonTwo = document.querySelector('.season-2');
+const subSelectItemsSeasonThree = document.querySelector('.season-3');
+const subSelectItemsSeasonFour = document.querySelector('.season-4');
+const subSelectItemsSeasonFive = document.querySelector('.season-5');
+
+const allEpisodes = Array.from(document.querySelectorAll ('.wrap__img-test'));
+console.log('allEpisodes', allEpisodes);
+
+document.querySelector('.navigation').addEventListener('click', function(e) {
+  const target = e.target;
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'sub-items'
+  ) {
+    subSelectItems.style.display = 'block';
+  }
+
+})
+
+document.querySelector('.sub-items').addEventListener('click', function (e) {
+  const target = e.target;
+
+  e.preventDefault();
+
+  document.querySelector('.select-item p').innerHTML = target.innerHTML;
+
+  localStorage.setItem('id', target.id);
+
+  subSelectItems.style.display = 'none';
+
+})
+
+document.querySelector('.sub-items-2').addEventListener('click', function (e) {
+  const target = e.target;
+
+  e.preventDefault();
+
+  document.querySelector('.select-2__item p').innerHTML = target.innerHTML;
+
+  localStorage.setItem('episode', target.id);
+
+  console.log('local', localStorage.getItem('episode'));
+
+  target.closest('ul').style.display = 'none';
+
+  const currentId = localStorage.getItem('episode');
+
+  allEpisodes.map((episode, i) => {
+    allEpisodes[i].style.display = 'none';
+    allEpisodes[currentId].style.display = 'block';
+  })
+
+
+
+})
+
+
+document.querySelector('.navigation').addEventListener('click', function(e) {
+  const target = e.target;
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'select-2__sub-items' &&
+    localStorage.getItem('id') === '1 season'
+  ) {
+    subSelectItemsSeasonOne.style.display = 'block';
+  }
+
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'select-2__sub-items' &&
+    localStorage.getItem('id') === '2 season'
+  ) {
+    subSelectItemsSeasonTwo.style.display = 'block';
+  }
+
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'select-2__sub-items' &&
+    localStorage.getItem('id') === '3 season'
+  ) {
+    subSelectItemsSeasonThree.style.display = 'block';
+  }
+
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'select-2__sub-items' &&
+    localStorage.getItem('id') === '4 season'
+  ) {
+    subSelectItemsSeasonFour.style.display = 'block';
+  }
+
+  if(
+    target.hasAttribute('data-description') &&
+    target.getAttribute ('data-description') == 'select-2__sub-items' &&
+    localStorage.getItem('id') === '5 season'
+  ) {
+    subSelectItemsSeasonFive.style.display = 'block';
+  }
+
+})
+
+
+// document.onclick = function (e) {
+//   if (e.target.className !== "navigation") {
+//     subNav.style.display = "none";
+//   };
+// };
