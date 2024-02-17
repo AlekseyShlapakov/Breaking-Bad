@@ -247,7 +247,7 @@ const subSelectItemsSeasonThree = document.querySelector('.season-3');
 const subSelectItemsSeasonFour = document.querySelector('.season-4');
 const subSelectItemsSeasonFive = document.querySelector('.season-5');
 
-const allEpisodes = Array.from(document.querySelectorAll ('.wrap__img-test'));
+const allEpisodes = Array.from(document.querySelectorAll ('.section-sixth__left'));
 console.log('allEpisodes', allEpisodes);
 
 document.querySelector('.navigation').addEventListener('click', function(e) {
@@ -283,18 +283,16 @@ document.querySelector('.sub-items-2').addEventListener('click', function (e) {
 
   localStorage.setItem('episode', target.id);
 
-  console.log('local', localStorage.getItem('episode'));
-
   target.closest('ul').style.display = 'none';
 
   const currentId = localStorage.getItem('episode');
 
-  allEpisodes.map((episode, i) => {
-    allEpisodes[i].style.display = 'none';
-    allEpisodes[currentId].style.display = 'block';
-  })
-
-
+  setTimeout(() => {
+    allEpisodes.map((episode, i) => {
+      allEpisodes[i].style.display = 'none';
+      allEpisodes[currentId].style.display = 'block';
+    }, 10)
+  });
 
 })
 

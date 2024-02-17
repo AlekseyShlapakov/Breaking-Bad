@@ -1,118 +1,44 @@
-input
-{
-  display: none;
+/*------- Select episodes --------*/
+
+@import "../base/_variables.less";
+
+.select-1, .select-2 {
+    width: 151px;
 }
 
-.select, .select2
-{
-  display: inline-block;
-  background-image: url(../img/season.svg);
-  background-repeat: no-repeat;
-  width: 152px;
-  height: 55px;
-  line-height: 30px;
-  position: relative;
+.select-item, .select-2__item {
+    position: relative;
+    background-image: url('../img/season\ 3.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    cursor: pointer;
+    height: 50px;
 }
 
-.select2 {
-  background-image: url(../img/episode.svg);
+.select-item p, .select-2__item p {
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
 
-.select input[name="list"]:not(:checked) ~ #text
-{
-  color: black;
-  background: transparent;
+.sub-items, .select-2__sub-items {
+    position: absolute;
+    margin-top: 48px;
+    left: 0;
 }
 
-.select input[name="list"]:checked ~ #text
-{
-  background: transparent;
-  color: transparent;
-  z-index: 2;
+
+.sub-items li, .select-2__sub-items li {
+    padding: 10px 73px 10px 13px;
+    border: 1px solid #ddd;
 }
 
-#select:disabled ~ .items #text
-{
-  background: #eee;
+.sub-items li a:hover, .select-2__sub-items li a:hover {
+    color: @akcent;
 }
 
-.select:before
-{
-  content: "";
-  display: inline-block;
-  background: transparent;
-  position: absolute;
-  right: 56px;
-  top: -51px;
-  width: 38px;
-  height: 145px;
-  z-index: 5;
-  text-align: center;
-  line-height: 26px;
-  transform: rotate(90deg);
-  cursor: pointer;
+.position-z {
+    position: relative;
 }
 
-.items
-{
-  display: block;
-  min-height: 50px;
-  position: absolute;
-  overflow: hidden;
-  width: 150px;
-  cursor: pointer;
-  margin-top: 16px;
-  z-index: 4;
-}
-
-#select:not(:checked) ~ .items
-{
-  height: 30px;
-}
-
-.items label
-{
-  border: 1px solid #ddd;
-  display: none;
-  padding-left: 28px;
-  padding-top: 7px;
-  font-size: 18px;
-  background: transparent;
-  color: #fff;
-  height: 45px;
-}
-
-.items label:hover
-{
-    background: rgba(22, 21, 21, 0.7);
-  cursor: pointer;
-}
-
-#select:checked ~ .items
-{
-  padding-top: 30px;
-}
-
-#select:checked ~ .items label
-{
-  display: block;
-}
-
-.items input:checked + label
-{
-  display: block!important;
-  border: none;
-  background: rgba(22, 21, 21, 0.7);
-}
-
-#select:checked ~ .bg
-{
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
-  background: rgba(0,0,0,0.4);
-}
 
