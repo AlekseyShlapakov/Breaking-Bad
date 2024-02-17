@@ -1,7 +1,8 @@
 input {
   display: none;
 }
-.select {
+.select,
+.select2 {
   display: inline-block;
   background-image: url(../img/season.svg);
   background-repeat: no-repeat;
@@ -9,6 +10,9 @@ input {
   height: 55px;
   line-height: 30px;
   position: relative;
+}
+.select2 {
+  background-image: url(../img/episode.svg);
 }
 .select input[name="list"]:not(:checked) ~ #text {
   color: black;

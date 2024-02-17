@@ -1,3 +1,5 @@
+@import "./base/_variables.less";
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -19,6 +21,57 @@ body {
     font-size: 15px;
     color: #fff;
     font-family: 'Proxima Nova', 'Noto Sans';
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.select-1, .select-2 {
+    width: 200px;
+}
+
+.select-item, .select-2__item {
+    position: relative;
+    background-image: url('../img/season\ 3.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    cursor: pointer;
+    height: 50px;
+}
+
+.select-item p, .select-2__item p {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.sub-items, .select-2__sub-items {
+    position: absolute;
+    margin-top: 47px;
+    left: 0;
+}
+
+.sub-items li, .select-2__sub-items li {
+    padding: 10px 73px 10px 13px;
+    border: 1px solid #ddd;
+}
+
+.sub-items li a:hover, .select-2__sub-items li a:hover {
+    color: @akcent;
+    background: transparent;
+}
+
+// .season-1 {
+//     opacity: 0;
+// }
+
+.wrap__img-test {
+    display: flex;
+    justify-content: center;
 }
 
 /*

@@ -1,12 +1,17 @@
 /*------Soundtrack-----------*/
 .section-fifth {
   height: 800px;
-  padding-top: 177px;
+  padding-top: 100px;
   position: relative;
   background-image: url(../img/bg/bg-5.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-width: 769px) {
+  .section-fifth {
+    padding-top: 177px;
+  }
+}
 .row-section-fifth {
   display: flex;
   justify-content: space-between;
@@ -14,14 +19,28 @@
 .row-section-fifth {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 @media (min-width: 769px) {
   .row-section-fifth {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
 .section-fifth__left {
-  width: 460px;
+  margin-left: 0;
+}
+@media (min-width: 769px) {
+  .section-fifth__left {
+    margin-left: 30px;
+  }
+}
+.section-fifth__right {
+  margin-bottom: 40px;
+}
+@media (min-width: 769px) {
+  .section-fifth__right {
+    margin-bottom: 0;
+  }
 }
 .section-fifth__title {
   font-family: 'Cooper Md BT';

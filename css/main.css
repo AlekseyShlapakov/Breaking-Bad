@@ -16,49 +16,8 @@ body {
   font-family: 'Proxima Nova', 'Noto Sans';
 }
 .navigation {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  padding-bottom: 100px;
-}
-.select-1,
-.select-2 {
-  width: 200px;
-}
-.select-item,
-.select-2__item {
-  position: relative;
-  background-image: url('../img/season\ 3.svg');
-  background-repeat: no-repeat;
-  background-position: left;
-  cursor: pointer;
-  height: 50px;
-}
-.select-item p,
-.select-2__item p {
   position: absolute;
-  left: 15px;
-  top: 15px;
-}
-.sub-items,
-.select-2__sub-items {
-  position: absolute;
-  margin-top: 47px;
-  left: 0;
-}
-.sub-items li,
-.select-2__sub-items li {
-  padding: 10px 73px 10px 13px;
-  border: 1px solid #ddd;
-}
-.sub-items li a:hover,
-.select-2__sub-items li a:hover {
-  color: #DCEE19;
-  background: transparent;
-}
-.wrap__img-test {
-  display: flex;
-  justify-content: center;
+  z-index: 1;
 }
 /*
 font-family: 'Montserrat', sans-serif;
@@ -87,7 +46,7 @@ font-family: 'Playfair Display', serif;*/
   margin-bottom: 6px;
 }
 .section__text {
-  width: 290px;
+  max-width: 100%;
   font-family: 'Proxima Nova';
   font-size: 14px;
   line-height: 170%;
@@ -97,14 +56,8 @@ font-family: 'Playfair Display', serif;*/
   margin: 0;
   margin-bottom: 10px;
 }
-@media (min-width: 321px) {
-  .section__text {
-    width: 340px;
-  }
-}
 @media (min-width: 1025px) {
   .section__text {
-    width: 367px;
     font-size: 15px;
   }
 }
@@ -534,8 +487,7 @@ font-family: 'Playfair Display', serif;*/
 /*------ End Casts-----------*/
 /*------Soundtrack-----------*/
 .section-fifth {
-  height: 800px;
-  padding-top: 100px;
+  padding-top: 365px;
   position: relative;
   background-image: url(../img/bg/bg-5.jpg);
   background-repeat: no-repeat;
@@ -545,10 +497,6 @@ font-family: 'Playfair Display', serif;*/
   .section-fifth {
     padding-top: 177px;
   }
-}
-.row-section-fifth {
-  display: flex;
-  justify-content: space-between;
 }
 .row-section-fifth {
   display: flex;
@@ -622,8 +570,14 @@ font-family: 'Playfair Display', serif;*/
   position: relative;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+}
+@media (min-width: 769px) {
+  .row-section-sixth {
+    flex-direction: row;
+  }
 }
 .row-section-sixth:last-child {
   margin-bottom: 0;
@@ -632,14 +586,11 @@ font-family: 'Playfair Display', serif;*/
   display: flex;
   justify-content: flex-end;
 }
-.section-sixth__right-form {
-  color: #000;
-}
 .section-sixth__left-img {
   position: relative;
 }
 .section-sixth__left-img:before {
-  content: '';
+  content: "";
   background-image: url(../img/play-big.svg);
   background-repeat: no-repeat;
   position: absolute;
@@ -700,104 +651,68 @@ font-family: 'Playfair Display', serif;*/
   bottom: 0;
   font-size: 20px;
 }
-.section-sixth__right-scroll {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  border-right: 1px solid #fff;
+.section-sixth__right-series {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  max-height: 517px;
+  max-width: 400px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+@media (min-width: 769px) {
+  .section-sixth__right-series {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+.section-sixth__right-series::-webkit-scrollbar {
+  width: 1px;
+}
+.section-sixth__right-series::-webkit-scrollbar-thumb {
+  background-color: #DCEE19;
+  /* цвет плашки */
 }
 /*------ End Watch all-----------*/
-input {
-  display: none;
+/*------- Select episodes --------*/
+.select-1,
+.select-2 {
+  width: 151px;
 }
-.select,
-.select2 {
-  display: inline-block;
-  background-image: url(../img/season.svg);
-  background-repeat: no-repeat;
-  width: 152px;
-  height: 55px;
-  line-height: 30px;
+.select-item,
+.select-2__item {
   position: relative;
+  background-image: url('../img/season\ 3.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  cursor: pointer;
+  height: 50px;
 }
-.select2 {
-  background-image: url(../img/episode.svg);
-}
-.select input[name="list"]:not(:checked) ~ #text {
-  color: black;
-  background: transparent;
-}
-.select input[name="list"]:checked ~ #text {
-  background: transparent;
-  color: transparent;
-  z-index: 2;
-}
-#select:disabled ~ .items #text {
-  background: #eee;
-}
-.select:before {
-  content: "";
-  display: inline-block;
-  background: transparent;
+.select-item p,
+.select-2__item p {
   position: absolute;
-  right: 56px;
-  top: -51px;
-  width: 38px;
-  height: 145px;
-  z-index: 5;
-  text-align: center;
-  line-height: 26px;
-  transform: rotate(90deg);
-  cursor: pointer;
+  left: 15px;
+  top: 15px;
 }
-.items {
-  display: block;
-  min-height: 50px;
+.sub-items,
+.select-2__sub-items {
   position: absolute;
-  overflow: hidden;
-  width: 150px;
-  cursor: pointer;
-  margin-top: 16px;
-  z-index: 4;
-}
-#select:not(:checked) ~ .items {
-  height: 30px;
-}
-.items label {
-  border: 1px solid #ddd;
-  display: none;
-  padding-left: 28px;
-  padding-top: 7px;
-  font-size: 18px;
-  background: transparent;
-  color: #fff;
-  height: 45px;
-}
-.items label:hover {
-  background: rgba(22, 21, 21, 0.7);
-  cursor: pointer;
-}
-#select:checked ~ .items {
-  padding-top: 30px;
-}
-#select:checked ~ .items label {
-  display: block;
-}
-.items input:checked + label {
-  display: block!important;
-  border: none;
-  background: rgba(22, 21, 21, 0.7);
-}
-#select:checked ~ .bg {
-  position: fixed;
-  top: 0;
+  margin-top: 48px;
   left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
-  background: rgba(0, 0, 0, 0.4);
+}
+.sub-items li,
+.select-2__sub-items li {
+  padding: 10px 73px 10px 13px;
+  border: 1px solid #ddd;
+}
+.sub-items li a:hover,
+.select-2__sub-items li a:hover {
+  color: #DCEE19;
+}
+.position-z {
+  position: relative;
 }
 /*--------- Header ----------*/
 .header {

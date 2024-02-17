@@ -15,6 +15,51 @@ body {
   color: #fff;
   font-family: 'Proxima Nova', 'Noto Sans';
 }
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+.select-1,
+.select-2 {
+  width: 200px;
+}
+.select-item,
+.select-2__item {
+  position: relative;
+  background-image: url('../img/season\ 3.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  cursor: pointer;
+  height: 50px;
+}
+.select-item p,
+.select-2__item p {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.sub-items,
+.select-2__sub-items {
+  position: absolute;
+  margin-top: 47px;
+  left: 0;
+}
+.sub-items li,
+.select-2__sub-items li {
+  padding: 10px 73px 10px 13px;
+  border: 1px solid #ddd;
+}
+.sub-items li a:hover,
+.select-2__sub-items li a:hover {
+  color: #DCEE19;
+  background: transparent;
+}
+.wrap__img-test {
+  display: flex;
+  justify-content: center;
+}
 /*
 font-family: 'Montserrat', sans-serif;
 font-family: 'Playfair Display', serif;*/
@@ -490,12 +535,17 @@ font-family: 'Playfair Display', serif;*/
 /*------Soundtrack-----------*/
 .section-fifth {
   height: 800px;
-  padding-top: 177px;
+  padding-top: 100px;
   position: relative;
   background-image: url(../img/bg/bg-5.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-width: 769px) {
+  .section-fifth {
+    padding-top: 177px;
+  }
+}
 .row-section-fifth {
   display: flex;
   justify-content: space-between;
@@ -503,14 +553,28 @@ font-family: 'Playfair Display', serif;*/
 .row-section-fifth {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 @media (min-width: 769px) {
   .row-section-fifth {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
 .section-fifth__left {
-  width: 460px;
+  margin-left: 0;
+}
+@media (min-width: 769px) {
+  .section-fifth__left {
+    margin-left: 30px;
+  }
+}
+.section-fifth__right {
+  margin-bottom: 40px;
+}
+@media (min-width: 769px) {
+  .section-fifth__right {
+    margin-bottom: 0;
+  }
 }
 .section-fifth__title {
   font-family: 'Cooper Md BT';
@@ -648,7 +712,8 @@ font-family: 'Playfair Display', serif;*/
 input {
   display: none;
 }
-.select {
+.select,
+.select2 {
   display: inline-block;
   background-image: url(../img/season.svg);
   background-repeat: no-repeat;
@@ -656,6 +721,9 @@ input {
   height: 55px;
   line-height: 30px;
   position: relative;
+}
+.select2 {
+  background-image: url(../img/episode.svg);
 }
 .select input[name="list"]:not(:checked) ~ #text {
   color: black;

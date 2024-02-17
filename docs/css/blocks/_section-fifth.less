@@ -3,33 +3,51 @@
 
 .section-fifth {
     height: 800px;
-    padding-top: 177px;
+    padding-top: 100px;
     position: relative;
     background-image: url(../img/bg/bg-5.jpg);
     background-repeat: no-repeat;
     background-position: center;
 
-}
-
-.row-section-fifth {
-    display: flex;
-    justify-content: space-between;
+    @media (min-width: 769px) {
+        padding-top: 177px;
+    }
 
 }
 
 .row-section-fifth {
     display: flex;
     justify-content: space-between;
-    // flex-direction: column;
+
+}
+
+.row-section-fifth {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   
     @media (min-width: 769px) {
-        flex-direction: row-reverse;
-  
+        flex-direction: row;
     }
   }
 
 .section-fifth__left {
-    width: 460px;
+    // width: auto;
+    margin-left: 0;
+
+    @media (min-width: 769px) {
+        // width: 460px;
+        margin-left: 30px;
+    
+    }
+}
+
+.section-fifth__right {
+    margin-bottom: 40px;
+
+    @media (min-width: 769px) {
+        margin-bottom: 0;
+    }
 }
 
 .section-fifth__title {
@@ -70,5 +88,17 @@
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 13px;
 }
+
+// #wrapper {
+//     padding: 0 !important;
+//     width: 13em !important;
+
+//     @media (min-width: 769px) {
+//         // width: 460px;
+//         margin-left: 30px;
+//         width: 25em !important;
+    
+//     }
+// }
 
 /*------End Soundtrack-----------*/

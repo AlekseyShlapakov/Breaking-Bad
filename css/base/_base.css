@@ -22,7 +22,7 @@
   margin-bottom: 6px;
 }
 .section__text {
-  width: 290px;
+  max-width: 100%;
   font-family: 'Proxima Nova';
   font-size: 14px;
   line-height: 170%;
@@ -32,14 +32,8 @@
   margin: 0;
   margin-bottom: 10px;
 }
-@media (min-width: 321px) {
-  .section__text {
-    width: 340px;
-  }
-}
 @media (min-width: 1025px) {
   .section__text {
-    width: 367px;
     font-size: 15px;
   }
 }
