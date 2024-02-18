@@ -1,22 +1,11 @@
 /*------Section second - Jesse-----------*/
 .section-second {
-  height: 680px;
-  padding-top: 100px;
+  padding-top: 70px;
   position: relative;
-}
-@media (min-width: 450px) {
-  .section-second {
-    height: 900px;
-  }
 }
 @media (min-width: 768px) {
   .section-second {
-    height: 600px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-second {
-    height: 800px;
+    padding-top: 0;
   }
 }
 .row-section-second {
@@ -35,7 +24,6 @@
 @media (min-width: 1200px) {
   .section-second__right {
     display: block;
-    margin-left: 30px;
     position: relative;
   }
   .section-second__right:before {
@@ -56,7 +44,6 @@
   .section-second__right-medium {
     display: block;
     margin-bottom: 40px;
-    margin-left: 30px;
     position: relative;
   }
   .section-second__right-medium:before {
@@ -82,7 +69,6 @@
   .section-second__right-small {
     display: block;
     margin-bottom: 40px;
-    margin-left: 30px;
     position: relative;
   }
   .section-second__right-small:before {

@@ -1,15 +1,9 @@
 /*------Soundtrack-----------*/
 .section-fifth {
-  padding-top: 365px;
   position: relative;
   background-image: url(../img/bg/bg-5.jpg);
   background-repeat: no-repeat;
   background-position: center;
-}
-@media (min-width: 769px) {
-  .section-fifth {
-    padding-top: 177px;
-  }
 }
 .row-section-fifth {
   display: flex;
@@ -19,14 +13,6 @@
 @media (min-width: 769px) {
   .row-section-fifth {
     flex-direction: row;
-  }
-}
-.section-fifth__left {
-  margin-left: 0;
-}
-@media (min-width: 769px) {
-  .section-fifth__left {
-    margin-left: 30px;
   }
 }
 .section-fifth__right {
