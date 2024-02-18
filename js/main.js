@@ -47,7 +47,6 @@ document.querySelector ('.row-menu').addEventListener ('click', function (e) {
 
     secondText.classList.add('fade');
     bgImg.style.backgroundImage = 'url(./img/header-img/jesse.png)';
-    // transition: all 0.3s ease-in;
     bgImg.style.transition = 'all 0.5s ease-in';
     secondText.style.transition = 'all 0.3s ease-in';
   } 
@@ -248,57 +247,20 @@ const subSelectItemsSeasonFour = document.querySelector('.season-4');
 const subSelectItemsSeasonFive = document.querySelector('.season-5');
 
 const allEpisodes = Array.from(document.querySelectorAll ('.section-sixth__left'));
-console.log('allEpisodes', allEpisodes);
+const subSelects = Array.from(document.querySelectorAll ('.select-2__sub-items'));
 
-document.querySelector('.navigation').addEventListener('click', function(e) {
+document.querySelector('.section-sixth').addEventListener('click', function(e) {
   const target = e.target;
-  if(
+
+  if (
     target.hasAttribute('data-description') &&
     target.getAttribute ('data-description') == 'sub-items'
   ) {
     subSelectItems.style.display = 'block';
+  } else {
+    subSelectItems.style.display = 'none';
   }
 
-})
-
-document.querySelector('.sub-items').addEventListener('click', function (e) {
-  const target = e.target;
-
-  e.preventDefault();
-
-  document.querySelector('.select-item p').innerHTML = target.innerHTML;
-
-  localStorage.setItem('id', target.id);
-
-  subSelectItems.style.display = 'none';
-
-})
-
-document.querySelector('.sub-items-2').addEventListener('click', function (e) {
-  const target = e.target;
-
-  e.preventDefault();
-
-  document.querySelector('.select-2__item p').innerHTML = target.innerHTML;
-
-  localStorage.setItem('episode', target.id);
-
-  target.closest('ul').style.display = 'none';
-
-  const currentId = localStorage.getItem('episode');
-
-  setTimeout(() => {
-    allEpisodes.map((episode, i) => {
-      allEpisodes[i].style.display = 'none';
-      allEpisodes[currentId].style.display = 'block';
-    }, 10)
-  });
-
-})
-
-
-document.querySelector('.navigation').addEventListener('click', function(e) {
-  const target = e.target;
   if(
     target.hasAttribute('data-description') &&
     target.getAttribute ('data-description') == 'select-2__sub-items' &&
@@ -339,11 +301,45 @@ document.querySelector('.navigation').addEventListener('click', function(e) {
     subSelectItemsSeasonFive.style.display = 'block';
   }
 
+  if (
+    target.getAttribute ('data-description') !== 'select-2__sub-items' 
+  ) {
+    subSelects.map(subSelect => subSelect.style.display = 'none')
+  }
+
 })
 
+document.querySelector('.sub-items').addEventListener('click', function (e) {
+  const target = e.target;
 
-// document.onclick = function (e) {
-//   if (e.target.className !== "navigation") {
-//     subNav.style.display = "none";
-//   };
-// };
+  e.preventDefault();
+
+  document.querySelector('.select-item p').innerHTML = target.innerHTML;
+
+  localStorage.setItem('id', target.id);
+
+  subSelectItems.style.display = 'none';
+
+})
+
+document.querySelector('.sub-items-2').addEventListener('click', function (e) {
+  const target = e.target;
+
+  e.preventDefault();
+
+  document.querySelector('.select-2__item p').innerHTML = target.innerHTML;
+
+  localStorage.setItem('episode', target.id);
+
+  target.closest('ul').style.display = 'none';
+
+  const currentId = localStorage.getItem('episode');
+
+  setTimeout(() => {
+    allEpisodes.map((episode, i) => {
+      allEpisodes[i].style.display = 'none';
+      allEpisodes[currentId].style.display = 'block';
+    })
+  });
+
+})

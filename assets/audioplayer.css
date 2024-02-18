@@ -9,7 +9,7 @@ html
 		}
 		#wrapper
 		{
-			width: 13em;
+			width: 29em;
 			padding: 0;
 			/* height: 8.75em; 140 */
 			/* position: absolute;
@@ -17,12 +17,6 @@ html
 			left: 50%; */
 			/* margin: -4.375em 0 0 -15em; 70 240 */
 		}
-
-		@media (min-width: 769px) {
-			#wrapper {
-				width: 28em;
-			}
-		  }
 
 			h1,
 			h1 a,

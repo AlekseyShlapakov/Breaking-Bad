@@ -1,23 +1,22 @@
 /*------Watch all-----------*/
 .section-sixth {
   position: relative;
-  height: 800px;
-  padding-top: 107px;
   background-image: url(../img/bg/bg-6.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 .row-section-sixth {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 60px;
+  display: block;
 }
 @media (min-width: 769px) {
   .row-section-sixth {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
   }
 }
 .row-section-sixth:last-child {
@@ -25,7 +24,14 @@
 }
 .section-sixth__right {
   display: flex;
-  justify-content: flex-end;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+}
+@media (min-width: 769px) {
+  .section-sixth__right {
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
 }
 .section-sixth__left-img {
   position: relative;
@@ -42,12 +48,13 @@
 }
 .section-sixth__left {
   position: relative;
+  margin-bottom: 40px;
 }
 .section-sixth__left-subtitle {
   position: absolute;
   background: rgba(22, 21, 21, 0.7);
   width: 100%;
-  height: 74px;
+  height: 15%;
   right: 0;
   bottom: 0;
   font-size: 20px;
@@ -55,9 +62,6 @@
 .section-sixth__left-text {
   padding-left: 40px;
   padding-top: 25px;
-}
-.section-sixth__right-form {
-  margin-left: 90px;
 }
 .section-sixth__right-wrap {
   position: relative;
@@ -98,7 +102,7 @@
   flex-direction: row;
   align-items: center;
   max-height: 517px;
-  max-width: 400px;
+  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
 }

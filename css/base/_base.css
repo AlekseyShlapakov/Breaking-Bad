@@ -37,6 +37,9 @@
     font-size: 15px;
   }
 }
+.row-section {
+  column-gap: 65px;
+}
 .img-adaptive,
 .text-adaptive {
   display: block;
@@ -57,4 +60,7 @@
 }
 .acent-color {
   color: #DCEE19;
+}
+.margin-right {
+  margin-right: 90px;
 }

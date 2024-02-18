@@ -22,7 +22,7 @@
 }
 @media (min-width: 1200px) {
   .header {
-    height: 1600px;
+    height: 1500px;
     background-image: url(../img/bg/bg-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -57,12 +57,12 @@
   max-width: 1218px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px;
+  padding: 70px 15px;
   height: 100%;
 }
 @media (min-width: 768px) {
   .container {
-    padding: 0 30px;
+    padding: 100px 30px;
   }
 }
 .container-bg {
@@ -383,24 +383,6 @@
 }
 /*------------- End Middle head ---------------*/
 /*---------- Footer head -------------*/
-.footer-panel {
-  padding-bottom: 40px;
-}
-@media (min-width: 667px) {
-  .footer-panel {
-    padding-bottom: 55px;
-  }
-}
-@media (min-width: 998px) {
-  .footer-panel {
-    padding-bottom: 205px;
-  }
-}
-@media (min-width: 1200px) {
-  .footer-panel {
-    padding-bottom: 135px;
-  }
-}
 .row-footer-panel {
   display: none;
 }
